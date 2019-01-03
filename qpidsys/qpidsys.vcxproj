@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{7FE0F2B7-0D9A-4EC0-B011-86A06806AEF7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>qpidsys</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)win32\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SYS_EXPORT;_WINDOWS;_USRDLL;qpidsys_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4244;4800;4355;4267;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;rpcrt4.lib;ws2_32.lib;advapi32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SYS_EXPORT;_WINDOWS;_USRDLL;qpidsys_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <DisableSpecificWarnings>4244;4800;4355;4267;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;rpcrt4.lib;ws2_32.lib;advapi32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;QPIDSYS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;QPIDSYS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\qpid\config.h" />
+    <ClInclude Include="..\include\qpid\ImportExport.h" />
+    <ClInclude Include="..\include\qpid\sys\Address.h" />
+    <ClInclude Include="..\include\qpid\sys\AggregateOutput.h" />
+    <ClInclude Include="..\include\qpid\sys\AsynchIOHandler.h" />
+    <ClInclude Include="..\include\qpid\sys\AtomicCount.h" />
+    <ClInclude Include="..\include\qpid\sys\AtomicValue.h" />
+    <ClInclude Include="..\include\qpid\sys\BlockingQueue.h" />
+    <ClInclude Include="..\include\qpid\sys\Codec.h" />
+    <ClInclude Include="..\include\qpid\sys\Compile.h" />
+    <ClInclude Include="..\include\qpid\sys\Condition.h" />
+    <ClInclude Include="..\include\qpid\sys\ConnectionCodec.h" />
+    <ClInclude Include="..\include\qpid\sys\CopyOnWriteArray.h" />
+    <ClInclude Include="..\include\qpid\sys\DeletionManager.h" />
+    <ClInclude Include="..\include\qpid\sys\DisableExceptionLogging.h" />
+    <ClInclude Include="..\include\qpid\sys\Dispatcher.h" />
+    <ClInclude Include="..\include\qpid\sys\DispatchHandle.h" />
+    <ClInclude Include="..\include\qpid\sys\Exception.h" />
+    <ClInclude Include="..\include\qpid\sys\ExceptionHolder.h" />
+    <ClInclude Include="..\include\qpid\sys\FileSysDir.h" />
+    <ClInclude Include="..\include\qpid\sys\IntegerTypes.h" />
+    <ClInclude Include="..\include\qpid\sys\IOHandle.h" />
+    <ClInclude Include="..\include\qpid\sys\LockFile.h" />
+    <ClInclude Include="..\include\qpid\sys\LockPtr.h" />
+    <ClInclude Include="..\include\qpid\sys\memory.h" />
+    <ClInclude Include="..\include\qpid\sys\MemoryMappedFile.h" />
+    <ClInclude Include="..\include\qpid\sys\Modules.h" />
+    <ClInclude Include="..\include\qpid\sys\Monitor.h" />
+    <ClInclude Include="..\include\qpid\sys\Msg.h" />
+    <ClInclude Include="..\include\qpid\sys\Mutex.h" />
+    <ClInclude Include="..\include\qpid\sys\NullSaslClient.h" />
+    <ClInclude Include="..\include\qpid\sys\NullSaslServer.h" />
+    <ClInclude Include="..\include\qpid\sys\Options.h" />
+    <ClInclude Include="..\include\qpid\sys\OptionsTemplates.h" />
+    <ClInclude Include="..\include\qpid\sys\OutputControl.h" />
+    <ClInclude Include="..\include\qpid\sys\OutputTask.h" />
+    <ClInclude Include="..\include\qpid\sys\Path.h" />
+    <ClInclude Include="..\include\qpid\sys\PipeHandle.h" />
+    <ClInclude Include="..\include\qpid\sys\PollableCondition.h" />
+    <ClInclude Include="..\include\qpid\sys\PollableQueue.h" />
+    <ClInclude Include="..\include\qpid\sys\Poller.h" />
+    <ClInclude Include="..\include\qpid\sys\Probes.h" />
+    <ClInclude Include="..\include\qpid\sys\ProtocolVersion.h" />
+    <ClInclude Include="..\include\qpid\sys\RefCounted.h" />
+    <ClInclude Include="..\include\qpid\sys\regex.h" />
+    <ClInclude Include="..\include\qpid\sys\Runnable.h" />
+    <ClInclude Include="..\include\qpid\sys\Sasl.h" />
+    <ClInclude Include="..\include\qpid\sys\SaslFactory.h" />
+    <ClInclude Include="..\include\qpid\sys\SaslServer.h" />
+    <ClInclude Include="..\include\qpid\sys\ScopedIncrement.h" />
+    <ClInclude Include="..\include\qpid\sys\SecurityLayer.h" />
+    <ClInclude Include="..\include\qpid\sys\SecuritySettings.h" />
+    <ClInclude Include="..\include\qpid\sys\Semaphore.h" />
+    <ClInclude Include="..\include\qpid\sys\SharedObject.h" />
+    <ClInclude Include="..\include\qpid\sys\Shlib.h" />
+    <ClInclude Include="..\include\qpid\sys\ShutdownHandler.h" />
+    <ClInclude Include="..\include\qpid\sys\SocketAddress.h" />
+    <ClInclude Include="..\include\qpid\sys\SocketTransport.h" />
+    <ClInclude Include="..\include\qpid\sys\StateMonitor.h" />
+    <ClInclude Include="..\include\qpid\sys\StrError.h" />
+    <ClInclude Include="..\include\qpid\sys\StringUtils.h" />
+    <ClInclude Include="..\include\qpid\sys\SystemInfo.h" />
+    <ClInclude Include="..\include\qpid\sys\Thread.h" />
+    <ClInclude Include="..\include\qpid\sys\Time.h" />
+    <ClInclude Include="..\include\qpid\sys\Timer.h" />
+    <ClInclude Include="..\include\qpid\sys\TimerWarnings.h" />
+    <ClInclude Include="..\include\qpid\sys\TransportFactory.h" />
+    <ClInclude Include="..\include\qpid\sys\unordered_map.h" />
+    <ClInclude Include="..\include\qpid\sys\Url.h" />
+    <ClInclude Include="..\include\qpid\sys\urlAdd.h" />
+    <ClInclude Include="..\include\qpid\sys\uuid.h" />
+    <ClInclude Include="..\include\qpid\sys\Waitable.h" />
+    <ClInclude Include="..\include\qpid\sys\windows\check.h" />
+    <ClInclude Include="..\include\qpid\sys\windows\Condition.h" />
+    <ClInclude Include="..\include\qpid\sys\windows\IntegerTypes.h" />
+    <ClInclude Include="..\include\qpid\sys\windows\IoHandlePrivate.h" />
+    <ClInclude Include="..\include\qpid\sys\windows\Mutex.h" />
+    <ClInclude Include="..\include\qpid\sys\windows\Time.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="qpidsys.cpp" />
+    <ClCompile Include="qpid\sys\Address.cpp" />
+    <ClCompile Include="qpid\sys\AggregateOutput.cpp" />
+    <ClCompile Include="qpid\sys\AsynchIOHandler.cpp" />
+    <ClCompile Include="qpid\sys\Dispatcher.cpp" />
+    <ClCompile Include="qpid\sys\DispatchHandle.cpp" />
+    <ClCompile Include="qpid\sys\Exception.cpp" />
+    <ClCompile Include="qpid\sys\Modules.cpp" />
+    <ClCompile Include="qpid\sys\NullSaslClient.cpp" />
+    <ClCompile Include="qpid\sys\NullSaslServer.cpp" />
+    <ClCompile Include="qpid\sys\Options.cpp" />
+    <ClCompile Include="qpid\sys\ProtocolVersion.cpp" />
+    <ClCompile Include="qpid\sys\Runnable.cpp" />
+    <ClCompile Include="qpid\sys\SaslFactory.cpp" />
+    <ClCompile Include="qpid\sys\SocketTransport.cpp" />
+    <ClCompile Include="qpid\sys\StringUtils.cpp" />
+    <ClCompile Include="qpid\sys\Timer.cpp" />
+    <ClCompile Include="qpid\sys\TimerWarnings.cpp" />
+    <ClCompile Include="qpid\sys\Url.cpp" />
+    <ClCompile Include="qpid\sys\windows\AsynchIO.cpp" />
+    <ClCompile Include="qpid\sys\windows\FileSysDir.cpp" />
+    <ClCompile Include="qpid\sys\windows\IocpPoller.cpp" />
+    <ClCompile Include="qpid\sys\windows\IOHandle.cpp" />
+    <ClCompile Include="qpid\sys\windows\LockFile.cpp" />
+    <ClCompile Include="qpid\sys\windows\MemoryMappedFile.cpp" />
+    <ClCompile Include="qpid\sys\windows\Path.cpp" />
+    <ClCompile Include="qpid\sys\windows\PipeHandle.cpp" />
+    <ClCompile Include="qpid\sys\windows\PollableCondition.cpp" />
+    <ClCompile Include="qpid\sys\windows\Shlib.cpp" />
+    <ClCompile Include="qpid\sys\windows\SocketAddress.cpp" />
+    <ClCompile Include="qpid\sys\windows\StrError.cpp" />
+    <ClCompile Include="qpid\sys\windows\SystemInfo.cpp" />
+    <ClCompile Include="qpid\sys\windows\Thread.cpp" />
+    <ClCompile Include="qpid\sys\windows\Time.cpp" />
+    <ClCompile Include="qpid\sys\windows\uuid.cpp" />
+    <ClCompile Include="qpid\sys\windows\WinSocket.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

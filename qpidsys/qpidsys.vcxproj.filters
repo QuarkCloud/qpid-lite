@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\qpid">
+      <UniqueIdentifier>{91a3bd84-7962-4b1b-abc4-374da3982ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid\sys">
+      <UniqueIdentifier>{3cbe8028-f351-4f38-8c1a-1247cca7613b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid\sys\windows">
+      <UniqueIdentifier>{f343930a-759f-443b-80b6-85221d46a07f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\qpid">
+      <UniqueIdentifier>{d00cc2ec-8666-46ca-9c19-cca446187ad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\qpid\sys">
+      <UniqueIdentifier>{a9a1530b-d2a9-4f4a-9865-cbc8f9c05587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\qpid\sys\windows">
+      <UniqueIdentifier>{006762df-9cb6-40dd-9b95-8e6eebdf454d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="qpidsys.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\StrError.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Options.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\Time.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Exception.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\Shlib.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\FileSysDir.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\DispatchHandle.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Dispatcher.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Runnable.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\IocpPoller.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\IOHandle.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\AsynchIO.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\WinSocket.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\SocketAddress.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\SystemInfo.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Address.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\Thread.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\uuid.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\LockFile.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\MemoryMappedFile.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\Path.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\PipeHandle.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\windows\PollableCondition.cpp">
+      <Filter>源文件\qpid\sys\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\SocketTransport.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\StringUtils.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\ProtocolVersion.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Timer.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\TimerWarnings.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\AsynchIOHandler.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Url.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\AggregateOutput.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\SaslFactory.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\NullSaslClient.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\NullSaslServer.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\sys\Modules.cpp">
+      <Filter>源文件\qpid\sys</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\qpid\sys\Compile.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\ImportExport.h">
+      <Filter>头文件\qpid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\IntegerTypes.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Mutex.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\StrError.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\windows\IntegerTypes.h">
+      <Filter>头文件\qpid\sys\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\windows\Mutex.h">
+      <Filter>头文件\qpid\sys\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Msg.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Options.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\config.h">
+      <Filter>头文件\qpid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\OptionsTemplates.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Exception.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\windows\Time.h">
+      <Filter>头文件\qpid\sys\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Time.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\DisableExceptionLogging.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\AtomicValue.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Shlib.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\windows\check.h">
+      <Filter>头文件\qpid\sys\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\windows\Condition.h">
+      <Filter>头文件\qpid\sys\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Condition.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\ExceptionHolder.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\FileSysDir.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\CopyOnWriteArray.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\DeletionManager.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Dispatcher.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\DispatchHandle.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Runnable.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Poller.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\windows\IoHandlePrivate.h">
+      <Filter>头文件\qpid\sys\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\IOHandle.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SocketAddress.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SystemInfo.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Address.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SecuritySettings.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Thread.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\uuid.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\LockPtr.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\LockFile.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\MemoryMappedFile.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Monitor.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\OutputTask.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\OutputControl.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Path.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\PipeHandle.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\PollableCondition.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\PollableQueue.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Probes.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\regex.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SecurityLayer.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\ScopedIncrement.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Codec.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Semaphore.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\ShutdownHandler.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SocketTransport.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\TransportFactory.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SharedObject.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\StringUtils.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\ConnectionCodec.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\ProtocolVersion.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\AsynchIOHandler.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Timer.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\TimerWarnings.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\RefCounted.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\unordered_map.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\urlAdd.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Waitable.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Url.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\AggregateOutput.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\BlockingQueue.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\memory.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Sasl.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SaslFactory.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\SaslServer.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\NullSaslClient.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\NullSaslServer.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\StateMonitor.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\Modules.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\sys\AtomicCount.h">
+      <Filter>头文件\qpid\sys</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

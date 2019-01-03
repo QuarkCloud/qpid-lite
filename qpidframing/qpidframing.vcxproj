@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1B7BDF5A-6523-4F16-ADD7-D17CBA507312}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>qpidframing</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)win32\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;FRAMING_EXPORT;_WINDOWS;_USRDLL;qpidframing_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(BOOST_ROOT)\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpidsysd.lib;qpidlogd.lib;qpidtypesd.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;FRAMING_EXPORT;_WINDOWS;_USRDLL;qpidframing_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(BOOST_ROOT)\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpidsysd.lib;qpidlogd.lib;qpidtypesd.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;QPIDFRAMING_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;QPIDFRAMING_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="qpidframing.cpp" />
+    <ClCompile Include="qpid\framing\AccumulatedAck.cpp" />
+    <ClCompile Include="qpid\framing\AllInvoker.cpp" />
+    <ClCompile Include="qpid\framing\AMQBody.cpp" />
+    <ClCompile Include="qpid\framing\AMQContentBody.cpp" />
+    <ClCompile Include="qpid\framing\AMQFrame.cpp" />
+    <ClCompile Include="qpid\framing\AMQHeaderBody.cpp" />
+    <ClCompile Include="qpid\framing\AMQHeartbeatBody.cpp" />
+    <ClCompile Include="qpid\framing\AMQMethodBody.cpp" />
+    <ClCompile Include="qpid\framing\AMQP_AllProxy.cpp" />
+    <ClCompile Include="qpid\framing\AMQP_ClientProxy.cpp" />
+    <ClCompile Include="qpid\framing\AMQP_ServerProxy.cpp" />
+    <ClCompile Include="qpid\framing\Array.cpp" />
+    <ClCompile Include="qpid\framing\Buffer.cpp" />
+    <ClCompile Include="qpid\framing\ClientInvoker.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionCloseBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionCloseOkBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionHeartbeatBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionOpenBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionOpenOkBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionRedirectBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionSecureBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionSecureOkBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionStartBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionStartOkBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionTuneBody.cpp" />
+    <ClCompile Include="qpid\framing\ConnectionTuneOkBody.cpp" />
+    <ClCompile Include="qpid\framing\DeliveryProperties.cpp" />
+    <ClCompile Include="qpid\framing\DtxCommitBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxEndBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxForgetBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxGetTimeoutBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxGetTimeoutResult.cpp" />
+    <ClCompile Include="qpid\framing\DtxPrepareBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxRecoverBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxRecoverResult.cpp" />
+    <ClCompile Include="qpid\framing\DtxRollbackBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxSelectBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxSetTimeoutBody.cpp" />
+    <ClCompile Include="qpid\framing\DtxStartBody.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeBindBody.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeBoundBody.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeBoundResult.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeDeclareBody.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeDeleteBody.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeQueryBody.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeQueryResult.cpp" />
+    <ClCompile Include="qpid\framing\ExchangeUnbindBody.cpp" />
+    <ClCompile Include="qpid\framing\ExecutionExceptionBody.cpp" />
+    <ClCompile Include="qpid\framing\ExecutionResultBody.cpp" />
+    <ClCompile Include="qpid\framing\ExecutionSyncBody.cpp" />
+    <ClCompile Include="qpid\framing\FieldTable.cpp" />
+    <ClCompile Include="qpid\framing\FieldValue.cpp" />
+    <ClCompile Include="qpid\framing\FileAckBody.cpp" />
+    <ClCompile Include="qpid\framing\FileCancelBody.cpp" />
+    <ClCompile Include="qpid\framing\FileConsumeBody.cpp" />
+    <ClCompile Include="qpid\framing\FileConsumeOkBody.cpp" />
+    <ClCompile Include="qpid\framing\FileDeliverBody.cpp" />
+    <ClCompile Include="qpid\framing\FileOpenBody.cpp" />
+    <ClCompile Include="qpid\framing\FileOpenOkBody.cpp" />
+    <ClCompile Include="qpid\framing\FileProperties.cpp" />
+    <ClCompile Include="qpid\framing\FilePublishBody.cpp" />
+    <ClCompile Include="qpid\framing\FileQosBody.cpp" />
+    <ClCompile Include="qpid\framing\FileQosOkBody.cpp" />
+    <ClCompile Include="qpid\framing\FileRejectBody.cpp" />
+    <ClCompile Include="qpid\framing\FileReturnBody.cpp" />
+    <ClCompile Include="qpid\framing\FileStageBody.cpp" />
+    <ClCompile Include="qpid\framing\FragmentProperties.cpp" />
+    <ClCompile Include="qpid\framing\FrameDecoder.cpp" />
+    <ClCompile Include="qpid\framing\FrameSet.cpp" />
+    <ClCompile Include="qpid\framing\Header.cpp" />
+    <ClCompile Include="qpid\framing\InitiationHandler.cpp" />
+    <ClCompile Include="qpid\framing\List.cpp" />
+    <ClCompile Include="qpid\framing\MessageAcceptBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageAcquireBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageAcquireResult.cpp" />
+    <ClCompile Include="qpid\framing\MessageCancelBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageFlowBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageFlushBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageProperties.cpp" />
+    <ClCompile Include="qpid\framing\MessageRejectBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageReleaseBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageResumeBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageResumeResult.cpp" />
+    <ClCompile Include="qpid\framing\MessageSetFlowModeBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageStopBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageSubscribeBody.cpp" />
+    <ClCompile Include="qpid\framing\MessageTransferBody.cpp" />
+    <ClCompile Include="qpid\framing\MethodBodyDefaultVisitor.cpp" />
+    <ClCompile Include="qpid\framing\MethodBodyFactory.cpp" />
+    <ClCompile Include="qpid\framing\ProtocolInitiation.cpp" />
+    <ClCompile Include="qpid\framing\Proxy.cpp" />
+    <ClCompile Include="qpid\framing\QueueDeclareBody.cpp" />
+    <ClCompile Include="qpid\framing\QueueDeleteBody.cpp" />
+    <ClCompile Include="qpid\framing\QueuePurgeBody.cpp" />
+    <ClCompile Include="qpid\framing\QueueQueryBody.cpp" />
+    <ClCompile Include="qpid\framing\QueueQueryResult.cpp" />
+    <ClCompile Include="qpid\framing\ReplyTo.cpp" />
+    <ClCompile Include="qpid\framing\reply_exceptions.cpp" />
+    <ClCompile Include="qpid\framing\SendContent.cpp" />
+    <ClCompile Include="qpid\framing\SequenceNumber.cpp" />
+    <ClCompile Include="qpid\framing\SequenceNumberSet.cpp" />
+    <ClCompile Include="qpid\framing\SequenceSet.cpp" />
+    <ClCompile Include="qpid\framing\ServerInvoker.cpp" />
+    <ClCompile Include="qpid\framing\SessionAttachBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionAttachedBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionCommandPointBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionCompletedBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionConfirmedBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionDetachBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionDetachedBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionExpectedBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionFlushBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionGapBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionKnownCompletedBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionRequestTimeoutBody.cpp" />
+    <ClCompile Include="qpid\framing\SessionTimeoutBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamCancelBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamConsumeBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamConsumeOkBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamDeliverBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamProperties.cpp" />
+    <ClCompile Include="qpid\framing\StreamPublishBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamQosBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamQosOkBody.cpp" />
+    <ClCompile Include="qpid\framing\StreamReturnBody.cpp" />
+    <ClCompile Include="qpid\framing\TransferContent.cpp" />
+    <ClCompile Include="qpid\framing\TxCommitBody.cpp" />
+    <ClCompile Include="qpid\framing\TxRollbackBody.cpp" />
+    <ClCompile Include="qpid\framing\TxSelectBody.cpp" />
+    <ClCompile Include="qpid\framing\TypeCode.cpp" />
+    <ClCompile Include="qpid\framing\UrlArray.cpp" />
+    <ClCompile Include="qpid\framing\Uuid.cpp" />
+    <ClCompile Include="qpid\framing\XaResult.cpp" />
+    <ClCompile Include="qpid\framing\Xid.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\qpid\framing\AccumulatedAck.h" />
+    <ClInclude Include="..\include\qpid\framing\AllInvoker.h" />
+    <ClInclude Include="..\include\qpid\framing\all_method_bodies.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQBody.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQContentBody.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQDataBlock.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQFrame.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQHeaderBody.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQHeartbeatBody.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQMethodBody.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQP_AllOperations.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQP_AllProxy.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQP_ClientOperations.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQP_ClientProxy.h" />
+    <ClInclude Include="..\include\qpid\framing\amqp_framing.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQP_HighestVersion.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQP_ServerOperations.h" />
+    <ClInclude Include="..\include\qpid\framing\AMQP_ServerProxy.h" />
+    <ClInclude Include="..\include\qpid\framing\amqp_structs.h" />
+    <ClInclude Include="..\include\qpid\framing\amqp_types.h" />
+    <ClInclude Include="..\include\qpid\framing\amqp_types_full.h" />
+    <ClInclude Include="..\include\qpid\framing\Array.h" />
+    <ClInclude Include="..\include\qpid\framing\BodyFactory.h" />
+    <ClInclude Include="..\include\qpid\framing\Buffer.h" />
+    <ClInclude Include="..\include\qpid\framing\BufferTypes.h" />
+    <ClInclude Include="..\include\qpid\framing\ChannelHandler.h" />
+    <ClInclude Include="..\include\qpid\framing\ClientInvoker.h" />
+    <ClInclude Include="..\include\qpid\framing\Compile.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionCloseBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionCloseOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionHeartbeatBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionOpenBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionOpenOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionRedirectBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionSecureBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionSecureOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionStartBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionStartOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionTuneBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ConnectionTuneOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\constants.h" />
+    <ClInclude Include="..\include\qpid\framing\DeliveryProperties.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxCommitBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxEndBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxForgetBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxGetTimeoutBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxGetTimeoutResult.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxPrepareBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxRecoverBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxRecoverResult.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxRollbackBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxSelectBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxSetTimeoutBody.h" />
+    <ClInclude Include="..\include\qpid\framing\DtxStartBody.h" />
+    <ClInclude Include="..\include\qpid\framing\Endian.h" />
+    <ClInclude Include="..\include\qpid\framing\enum.h" />
+    <ClInclude Include="..\include\qpid\framing\Exception.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeBindBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeBoundBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeBoundResult.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeDeclareBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeDeleteBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeQueryBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeQueryResult.h" />
+    <ClInclude Include="..\include\qpid\framing\ExchangeUnbindBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExecutionExceptionBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExecutionResultBody.h" />
+    <ClInclude Include="..\include\qpid\framing\ExecutionSyncBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FieldTable.h" />
+    <ClInclude Include="..\include\qpid\framing\FieldValue.h" />
+    <ClInclude Include="..\include\qpid\framing\FileAckBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileCancelBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileConsumeBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileConsumeOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileDeliverBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileOpenBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileOpenOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileProperties.h" />
+    <ClInclude Include="..\include\qpid\framing\FilePublishBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileQosBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileQosOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileRejectBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileReturnBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FileStageBody.h" />
+    <ClInclude Include="..\include\qpid\framing\FragmentProperties.h" />
+    <ClInclude Include="..\include\qpid\framing\FrameDecoder.h" />
+    <ClInclude Include="..\include\qpid\framing\FrameDefaultVisitor.h" />
+    <ClInclude Include="..\include\qpid\framing\FrameHandler.h" />
+    <ClInclude Include="..\include\qpid\framing\FrameSet.h" />
+    <ClInclude Include="..\include\qpid\framing\frame_body_lists.h" />
+    <ClInclude Include="..\include\qpid\framing\frame_functors.h" />
+    <ClInclude Include="..\include\qpid\framing\Handler.h" />
+    <ClInclude Include="..\include\qpid\framing\Header.h" />
+    <ClInclude Include="..\include\qpid\framing\HeaderProperties.h" />
+    <ClInclude Include="..\include\qpid\framing\InitiationHandler.h" />
+    <ClInclude Include="..\include\qpid\framing\InlineAllocator.h" />
+    <ClInclude Include="..\include\qpid\framing\InlineVector.h" />
+    <ClInclude Include="..\include\qpid\framing\InputHandler.h" />
+    <ClInclude Include="..\include\qpid\framing\Invoker.h" />
+    <ClInclude Include="..\include\qpid\framing\IsInSequenceSet.h" />
+    <ClInclude Include="..\include\qpid\framing\List.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageAcceptBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageAcquireBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageAcquireResult.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageCancelBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageFlowBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageFlushBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageProperties.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageRejectBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageReleaseBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageResumeBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageResumeResult.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageSetFlowModeBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageStopBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageSubscribeBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MessageTransferBody.h" />
+    <ClInclude Include="..\include\qpid\framing\MethodBodyConstVisitor.h" />
+    <ClInclude Include="..\include\qpid\framing\MethodBodyDefaultVisitor.h" />
+    <ClInclude Include="..\include\qpid\framing\MethodBodyFactory.h" />
+    <ClInclude Include="..\include\qpid\framing\MethodContent.h" />
+    <ClInclude Include="..\include\qpid\framing\ModelMethod.h" />
+    <ClInclude Include="..\include\qpid\framing\ProtocolInitiation.h" />
+    <ClInclude Include="..\include\qpid\framing\ProtocolVersion.h" />
+    <ClInclude Include="..\include\qpid\framing\Proxy.h" />
+    <ClInclude Include="..\include\qpid\framing\QueueDeclareBody.h" />
+    <ClInclude Include="..\include\qpid\framing\QueueDeleteBody.h" />
+    <ClInclude Include="..\include\qpid\framing\QueuePurgeBody.h" />
+    <ClInclude Include="..\include\qpid\framing\QueueQueryBody.h" />
+    <ClInclude Include="..\include\qpid\framing\QueueQueryResult.h" />
+    <ClInclude Include="..\include\qpid\framing\RangeSet.h" />
+    <ClInclude Include="..\include\qpid\framing\ReplyTo.h" />
+    <ClInclude Include="..\include\qpid\framing\reply_exceptions.h" />
+    <ClInclude Include="..\include\qpid\framing\ResizableBuffer.h" />
+    <ClInclude Include="..\include\qpid\framing\SendContent.h" />
+    <ClInclude Include="..\include\qpid\framing\SequenceNumber.h" />
+    <ClInclude Include="..\include\qpid\framing\SequenceNumberSet.h" />
+    <ClInclude Include="..\include\qpid\framing\SequenceSet.h" />
+    <ClInclude Include="..\include\qpid\framing\ServerInvoker.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionAttachBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionAttachedBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionCommandPointBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionCompletedBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionConfirmedBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionDetachBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionDetachedBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionExpectedBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionFlushBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionGapBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionKnownCompletedBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionRequestTimeoutBody.h" />
+    <ClInclude Include="..\include\qpid\framing\SessionTimeoutBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamCancelBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamConsumeBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamConsumeOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamDeliverBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamProperties.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamPublishBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamQosBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamQosOkBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StreamReturnBody.h" />
+    <ClInclude Include="..\include\qpid\framing\StructHelper.h" />
+    <ClInclude Include="..\include\qpid\framing\TransferContent.h" />
+    <ClInclude Include="..\include\qpid\framing\TxCommitBody.h" />
+    <ClInclude Include="..\include\qpid\framing\TxRollbackBody.h" />
+    <ClInclude Include="..\include\qpid\framing\TxSelectBody.h" />
+    <ClInclude Include="..\include\qpid\framing\TypeCode.h" />
+    <ClInclude Include="..\include\qpid\framing\TypeFilter.h" />
+    <ClInclude Include="..\include\qpid\framing\urlarray.h" />
+    <ClInclude Include="..\include\qpid\framing\Uuid.h" />
+    <ClInclude Include="..\include\qpid\framing\variant.h" />
+    <ClInclude Include="..\include\qpid\framing\XaResult.h" />
+    <ClInclude Include="..\include\qpid\framing\Xid.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

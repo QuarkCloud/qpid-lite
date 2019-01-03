@@ -1,0 +1,1070 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\qpid">
+      <UniqueIdentifier>{c15f92bf-bf56-4dad-83bd-a75e8fcca5e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\qpid\broker">
+      <UniqueIdentifier>{d4bf8d7e-d8dc-409f-8b04-5acb074523d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\qpid\broker\amqp0_10">
+      <UniqueIdentifier>{95e7c353-54bc-4818-8fb6-c5772bd4bab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid">
+      <UniqueIdentifier>{90670321-8ea0-4cee-8b46-95e55b4fe502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid\broker">
+      <UniqueIdentifier>{a820fe39-f5d8-4f93-9424-b715ef4a471e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid\broker\amqp0_10">
+      <UniqueIdentifier>{7bdcee1b-5531-4de0-a459-5e5dd988be46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid\broker\windows">
+      <UniqueIdentifier>{4bb6a47f-2e07-4dbf-94ac-771dd1dfad08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid\broker\acl">
+      <UniqueIdentifier>{d2938786-c273-4763-b18b-20584a4fe491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\qpid\broker\acl">
+      <UniqueIdentifier>{2f85f4fe-de8e-4e8d-b7b8-c58b4b092180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\qpid\broker\manage">
+      <UniqueIdentifier>{982f871e-0e8e-4b55-ad51-8d70b8ecfdcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\qpid\broker\manage">
+      <UniqueIdentifier>{c369e781-8ebb-4a8e-b9f0-6ca512b899fa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="qpidbroker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\amqp0_10\Connection.cpp">
+      <Filter>源文件\qpid\broker\amqp0_10</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\amqp0_10\MessageTransfer.cpp">
+      <Filter>源文件\qpid\broker\amqp0_10</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\windows\BrokerDefaults.cpp">
+      <Filter>源文件\qpid\broker\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\windows\SaslAuthenticator.cpp">
+      <Filter>源文件\qpid\broker\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\AsyncCommandCallback.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Bridge.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Broker.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\ConnectionHandler.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Credit.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DeliverableMessage.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DeliveryRecord.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DirectExchange.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DtxAck.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DtxBuffer.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DtxManager.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DtxTimeout.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\DtxWorkRecord.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Exchange.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\ExchangeRegistry.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Fairshare.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\FanOutExchange.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\FifoDistributor.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\HeadersExchange.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\IngressCompletion.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Link.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\LinkRegistry.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\LossyLvq.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\LossyQueue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Lvq.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Message.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\MessageAdapter.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\MessageBuilder.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\MessageDeque.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\MessageGroupManager.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\MessageMap.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\MessageStoreModule.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\NameGenerator.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\NullMessageStore.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\ObjectFactory.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\PagedQueue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\PersistableMessage.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\PersistableObject.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\PriorityQueue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Protocol.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Queue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueBindings.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueCleaner.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueCursor.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueDepth.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueuedMessage.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueFactory.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueFlowLimit.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueListeners.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueRegistry.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\QueueSettings.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\RecoveredDequeue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\RecoveredEnqueue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\RecoveryManagerImpl.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\RetryList.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SecureConnection.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Selector.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SelectorExpression.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SelectorToken.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SelectorValue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SelfDestructQueue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SemanticState.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SessionAdapter.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SessionHandler.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SessionManager.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\SessionState.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\System.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\ThresholdAlerts.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\TopicExchange.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\TxAccept.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\TxBuffer.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\TxDequeue.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\Vhost.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\Acl.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\AclConnectionCounter.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\AclData.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\AclLexer.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\AclPlugin.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\AclReader.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\AclResourceCounter.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\acl\AclValidator.cpp">
+      <Filter>源文件\qpid\broker\acl</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\ManagementAgent.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\ManagementDirectExchange.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\ManagementTopicExchange.cpp">
+      <Filter>源文件\qpid\broker</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\amqp0_10\Codecs.cpp">
+      <Filter>源文件\qpid\broker\amqp0_10</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueDeclare.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueDelete.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueQuotaDeny.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueRedirect.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueRedirectCancelled.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueThresholdCrossedDownward.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueThresholdCrossedUpward.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventQueueThresholdExceeded.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventSubscribe.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventUnbind.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventUnsubscribe.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Exchange4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Incoming.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Link4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\ManagementSetupState.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Memory.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\MemStat.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Outgoing.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Package.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\PackageACL.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Queue4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\QueuePolicy.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Session.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Subscription.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\System4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Topic.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\TopicPolicy.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Vhost4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Agent.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Binding.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Bridge4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Broker4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Connection4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Domain.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventAllow.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventBind.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventBrokerLinkDown.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventBrokerLinkUp.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventClientConnect.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventClientConnectFail.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventClientDisconnect.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventConnectionDeny.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventDeny.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventExchangeDeclare.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventExchangeDelete.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventFileLoaded.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\EventFileLoadFailed.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="qpid\broker\manage\Acl4qmf.cpp">
+      <Filter>源文件\qpid\broker\manage</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\qpid\broker\amqp0_10\Connection.h">
+      <Filter>头文件\qpid\broker\amqp0_10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\amqp0_10\MessageTransfer.h">
+      <Filter>头文件\qpid\broker\amqp0_10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\AclModule.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\AsyncCommandCallback.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\AsyncCompletion.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Bridge.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Broker.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\BrokerObserver.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\BrokerObservers.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\BrokerOptions.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Compile.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Connection.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ConnectionHandler.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ConnectionObserver.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ConnectionObservers.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Consumer.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ConsumerFactory.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Credit.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Deliverable.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DeliverableMessage.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DeliveryId.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DeliveryRecord.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DirectExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DtxAck.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DtxBuffer.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DtxManager.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DtxTimeout.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\DtxWorkRecord.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Exchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ExchangeRegistry.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Fairshare.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\FanOutExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\FedOps.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\FifoDistributor.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\HandlerImpl.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\HeadersExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\IndexedDeque.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\IngressCompletion.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Link.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\LinkRegistry.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\LossyLvq.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\LossyQueue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Lvq.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Message.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageAdapter.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageBuilder.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageDeque.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageDistributor.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageGroupManager.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageInterceptor.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageMap.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Messages.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageStore.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\MessageStoreModule.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\NameGenerator.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\NullMessageStore.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ObjectFactory.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Observers.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\OwnershipToken.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\PagedQueue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Persistable.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\PersistableConfig.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\PersistableExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\PersistableMessage.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\PersistableObject.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\PersistableQueue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\PriorityQueue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Protocol.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Queue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueBindings.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueCleaner.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueCursor.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueDepth.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueuedMessage.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueFactory.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueFlowLimit.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueListeners.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueObserver.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueObservers.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueRegistry.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\QueueSettings.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoverableConfig.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoverableExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoverableMessage.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoverableMessageImpl.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoverableQueue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoverableTransaction.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoveredDequeue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoveredEnqueue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoveryManager.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RecoveryManagerImpl.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\RetryList.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SaslAuthenticator.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SecureConnection.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Selector.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SelectorExpression.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SelectorToken.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SelectorValue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SelfDestructQueue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SemanticState.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SessionAdapter.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SessionContext.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SessionHandler.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SessionHandlerObserver.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SessionManager.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SessionOutputException.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SessionState.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\SignalHandler.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\System.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ThresholdAlerts.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TopicExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TopicKeyNode.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TransactionalStore.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TransactionObserver.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TxAccept.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TxBuffer.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TxDequeue.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\TxOp.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\Vhost.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ptr_map.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\Acl.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\AclConnectionCounter.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\AclData.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\AclLexer.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\AclReader.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\AclResourceCounter.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\AclTopicMatch.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\acl\AclValidator.h">
+      <Filter>头文件\qpid\broker\acl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ManagementAgent.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ManagementDirectExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\ManagementTopicExchange.h">
+      <Filter>头文件\qpid\broker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\amqp0_10\Codecs.h">
+      <Filter>头文件\qpid\broker\amqp0_10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\amqp0_10\CodecsInternal.h">
+      <Filter>头文件\qpid\broker\amqp0_10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueThresholdCrossedDownward.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueThresholdCrossedUpward.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueThresholdExceeded.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventSubscribe.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventUnbind.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventUnsubscribe.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Exchange.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Incoming.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Link.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ManagementSetupState.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Memory.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\MemStat.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Outgoing.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Package.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\PackageACL.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Queue.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\QueuePolicy.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Session.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Subscription.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\System.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Topic.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\TopicPolicy.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Vhost.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Acl.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Agent.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsAclLookup.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsAclLookupPublish.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerConnect.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerCreate.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerDelete.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerEcho.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerGetLogHiresTimestamp.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerGetLogLevel.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerGetTimestampConfig.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerQuery.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerQueueMoveMessages.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerQueueRedirect.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerSetLogHiresTimestamp.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerSetLogLevel.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsBrokerSetTimestampConfig.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsLinkBridge.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsQueuePurge.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\ArgsQueueReroute.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Binding.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Bridge.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Broker.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Connection.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\Domain.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventAllow.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventBind.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventBrokerLinkDown.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventBrokerLinkUp.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventClientConnect.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventClientConnectFail.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventClientDisconnect.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventConnectionDeny.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventDeny.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventExchangeDeclare.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventExchangeDelete.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventFileLoaded.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventFileLoadFailed.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueDeclare.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueDelete.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueQuotaDeny.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueRedirect.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\broker\manage\EventQueueRedirectCancelled.h">
+      <Filter>头文件\qpid\broker\manage</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\include\qpid\broker\manage-schema.xml">
+      <Filter>头文件\qpid\broker</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
