@@ -66,6 +66,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qpidbase", "qpidbase\qpidba
 		{7FE0F2B7-0D9A-4EC0-B011-86A06806AEF7} = {7FE0F2B7-0D9A-4EC0-B011-86A06806AEF7}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qpidproton", "qpidproton\qpidproton.vcxproj", "{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -146,6 +148,14 @@ Global
 		{DBE25F00-E895-4B0D-B3A7-EC4177C8D4B0}.Release|x64.Build.0 = Release|x64
 		{DBE25F00-E895-4B0D-B3A7-EC4177C8D4B0}.Release|x86.ActiveCfg = Release|Win32
 		{DBE25F00-E895-4B0D-B3A7-EC4177C8D4B0}.Release|x86.Build.0 = Release|Win32
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Debug|x64.ActiveCfg = Debug|x64
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Debug|x64.Build.0 = Debug|x64
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Debug|x86.ActiveCfg = Debug|Win32
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Debug|x86.Build.0 = Debug|Win32
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Release|x64.ActiveCfg = Release|x64
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Release|x64.Build.0 = Release|x64
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Release|x86.ActiveCfg = Release|Win32
+		{3108F83C-8E45-4C9C-B7E5-EBB4E4F2EF93}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

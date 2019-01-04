@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\core">
+      <UniqueIdentifier>{96437aaf-0aa5-499d-9cbd-a58d0907e961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\object">
+      <UniqueIdentifier>{723ce190-23f5-4c90-9703-f765d1a4c54b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\platform">
+      <UniqueIdentifier>{512ab257-d965-4b79-b145-335b8b5077eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\compiler">
+      <UniqueIdentifier>{7ce4aaa0-903e-46b2-8a03-03ca0963f9c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\sasl">
+      <UniqueIdentifier>{26df0050-2a06-4460-97aa-ba5b225a120f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ssl">
+      <UniqueIdentifier>{0c248adf-1314-478c-8842-06504807c431}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\proton\cid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\codec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\condition.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\connection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\connection_driver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\delivery.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\disposition.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\encodings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\engine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\import_export.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\link.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\listener.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\message.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\messenger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\netaddr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\proactor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\protocol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\reactor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\sasl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\sasl-plugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\selectable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\session.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\ssl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\terminus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\transport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\type_compat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\proton\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\autodetect.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\buffer.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\config.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\data.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\decoder.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\dispatch_actions.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\dispatcher.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\encoder.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine-internal.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\framing.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\log_private.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\max_align.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\message-internal.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\transport.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\util.h">
+      <Filter>源文件\core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="compiler\msvc\snprintf.c">
+      <Filter>源文件\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="core\autodetect.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\buffer.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\codec.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\connection_driver.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\decoder.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\dispatcher.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\encoder.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\engine.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\error.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\event.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\framing.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\log.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\message.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\transport.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\types.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\util.c">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="object\iterator.c">
+      <Filter>源文件\object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\list.c">
+      <Filter>源文件\object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\map.c">
+      <Filter>源文件\object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\object.c">
+      <Filter>源文件\object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\record.c">
+      <Filter>源文件\object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\string.c">
+      <Filter>源文件\object</Filter>
+    </ClCompile>
+    <ClCompile Include="platform\platform.c">
+      <Filter>源文件\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="sasl\cyrus_stub.c">
+      <Filter>源文件\sasl</Filter>
+    </ClCompile>
+    <ClCompile Include="sasl\default_sasl.c">
+      <Filter>源文件\sasl</Filter>
+    </ClCompile>
+    <ClCompile Include="sasl\sasl.c">
+      <Filter>源文件\sasl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\schannel.c">
+      <Filter>源文件\ssl</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

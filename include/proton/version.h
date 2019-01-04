@@ -26,6 +26,6 @@
 #define PN_VERSION_MINOR 26
 #define PN_VERSION_POINT 0
 
-#define PN_INSTALL_PREFIX "E:/qpid/qpid-cpp-1.38.0/qpid-proton"
+#define PN_INSTALL_PREFIX "E:/qpid/qpid-cpp/Proton"
 
 #endif /* version.h */
