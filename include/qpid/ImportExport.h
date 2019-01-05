@@ -33,7 +33,7 @@
 // QPID_INLINE_IMPORT  - Import declaration for Inline methods
 //
 
-#if defined(WIN32) && !defined(QPID_DECLARE_STATIC)
+#if (defined(WIN32) || defined(_WINDOWS)) && !defined(QPID_DECLARE_STATIC)
    //
    // Import and Export definitions for Windows:
    //

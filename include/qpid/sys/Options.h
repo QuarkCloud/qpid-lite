@@ -166,8 +166,7 @@ namespace qpid {
 			QPID_SYS_EXTERN void parse(int argc, char const* const* argv,
 				const std::string& configfile = std::string(),
 				bool  allowUnknown = false);
-
-			/**
+			/*
 			 * Tests for presence of argc/argv switch
 			 */
 			QPID_SYS_EXTERN bool findArg(int argc, char const* const* argv,

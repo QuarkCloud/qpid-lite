@@ -18,97 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\include\qpid\base\AclHost.h" />
-    <ClInclude Include="..\include\qpid\base\Address.h" />
-    <ClInclude Include="..\include\qpid\base\amqp0_10\Codecs.h" />
-    <ClInclude Include="..\include\qpid\base\amqp0_10\CodecsInternal.h" />
-    <ClInclude Include="..\include\qpid\base\amqp0_10\Connection.h" />
-    <ClInclude Include="..\include\qpid\base\amqp0_10\SessionHandler.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\CharSequence.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\Codec.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\Constructor.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\DataBuilder.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\Decoder.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\Descriptor.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\descriptors.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\Encoder.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\ListBuilder.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\ListReader.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\LoggingReader.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MapBuilder.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MapEncoder.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MapHandler.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MapReader.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MapSizeCalculator.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MessageEncoder.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MessageId.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\MessageReader.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\Reader.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\Sasl.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\SaslClient.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\SaslServer.h" />
-    <ClInclude Include="..\include\qpid\base\amqp\typecodes.h" />
-    <ClInclude Include="..\include\qpid\base\assert.h" />
-    <ClInclude Include="..\include\qpid\base\Compile.h" />
-    <ClInclude Include="..\include\qpid\base\ConnectionInputHandler.h" />
-    <ClInclude Include="..\include\qpid\base\ConnectionInputHandlerFactory.h" />
-    <ClInclude Include="..\include\qpid\base\ConnectionOutputHandler.h" />
-    <ClInclude Include="..\include\qpid\base\DataDir.h" />
-    <ClInclude Include="..\include\qpid\base\Modules.h" />
-    <ClInclude Include="..\include\qpid\base\NullSaslClient.h" />
-    <ClInclude Include="..\include\qpid\base\NullSaslServer.h" />
-    <ClInclude Include="..\include\qpid\base\Plugin.h" />
-    <ClInclude Include="..\include\qpid\base\RangeSet.h" />
-    <ClInclude Include="..\include\qpid\base\Sasl.h" />
-    <ClInclude Include="..\include\qpid\base\SaslFactory.h" />
-    <ClInclude Include="..\include\qpid\base\SaslServer.h" />
-    <ClInclude Include="..\include\qpid\base\SessionId.h" />
-    <ClInclude Include="..\include\qpid\base\SessionState.h" />
-    <ClInclude Include="..\include\qpid\base\UrlArray.h" />
-    <ClInclude Include="..\include\qpid\config.h" />
-    <ClInclude Include="..\include\qpid\ImportExport.h" />
-    <ClInclude Include="..\include\qpid\Version.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="qpidbase.cpp" />
-    <ClCompile Include="qpid\base\AclHost.cpp" />
-    <ClCompile Include="qpid\base\Address.cpp" />
-    <ClCompile Include="qpid\base\amqp0_10\Codecs.cpp" />
-    <ClCompile Include="qpid\base\amqp0_10\Connection.cpp" />
-    <ClCompile Include="qpid\base\amqp0_10\SessionHandler.cpp" />
-    <ClCompile Include="qpid\base\amqp\CharSequence.cpp" />
-    <ClCompile Include="qpid\base\amqp\DataBuilder.cpp" />
-    <ClCompile Include="qpid\base\amqp\Decoder.cpp" />
-    <ClCompile Include="qpid\base\amqp\Descriptor.cpp" />
-    <ClCompile Include="qpid\base\amqp\Encoder.cpp" />
-    <ClCompile Include="qpid\base\amqp\ListBuilder.cpp" />
-    <ClCompile Include="qpid\base\amqp\MapBuilder.cpp" />
-    <ClCompile Include="qpid\base\amqp\MapEncoder.cpp" />
-    <ClCompile Include="qpid\base\amqp\MapReader.cpp" />
-    <ClCompile Include="qpid\base\amqp\MapSizeCalculator.cpp" />
-    <ClCompile Include="qpid\base\amqp\MessageEncoder.cpp" />
-    <ClCompile Include="qpid\base\amqp\MessageId.cpp" />
-    <ClCompile Include="qpid\base\amqp\MessageReader.cpp" />
-    <ClCompile Include="qpid\base\amqp\Sasl.cpp" />
-    <ClCompile Include="qpid\base\amqp\SaslClient.cpp" />
-    <ClCompile Include="qpid\base\amqp\SaslServer.cpp" />
-    <ClCompile Include="qpid\base\assert.cpp" />
-    <ClCompile Include="qpid\base\DataDir.cpp" />
-    <ClCompile Include="qpid\base\Modules.cpp" />
-    <ClCompile Include="qpid\base\NullSaslClient.cpp" />
-    <ClCompile Include="qpid\base\NullSaslServer.cpp" />
-    <ClCompile Include="qpid\base\Plugin.cpp" />
-    <ClCompile Include="qpid\base\SaslFactory.cpp" />
-    <ClCompile Include="qpid\base\SessionId.cpp" />
-    <ClCompile Include="qpid\base\SessionState.cpp" />
-    <ClCompile Include="qpid\base\UrlArray.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{DBE25F00-E895-4B0D-B3A7-EC4177C8D4B0}</ProjectGuid>
+    <ProjectGuid>{ACCC21A9-528C-47C5-A4B0-9D5F771A7C37}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>qpidbroker</RootNamespace>
+    <RootNamespace>qpidlog</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -177,16 +91,17 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;BASE_EXPORT;_WINDOWS;_USRDLL;qpidbase_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;LOG_EXPORT;_WINDOWS;_USRDLL;qpidlog_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qpidsysd.lib;qpidlogd.lib;qpidframingd.lib;qpidtypesd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(BOOST_ROOT)\stage\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpidsysd.lib;advapi32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -195,17 +110,16 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;BASE_EXPORT;_WINDOWS;_USRDLL;qpidbase_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;LOG_EXPORT;_WINDOWS;_USRDLL;qpidlog_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
-      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qpidsysd.lib;qpidlogd.lib;qpidframingd.lib;qpidtypesd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(BOOST_ROOT)\stage\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpidsysd.lib;advapi32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -216,7 +130,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;QPIDBROKER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;QPIDLOG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -234,7 +148,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;QPIDBROKER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;QPIDLOG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -244,6 +158,28 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="qpidlog.cpp" />
+    <ClCompile Include="qpid\log\Logger.cpp" />
+    <ClCompile Include="qpid\log\Options.cpp" />
+    <ClCompile Include="qpid\log\OstreamOutput.cpp" />
+    <ClCompile Include="qpid\log\Selector.cpp" />
+    <ClCompile Include="qpid\log\Statement.cpp" />
+    <ClCompile Include="qpid\log\windows\SinkOptions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\qpid\config.h" />
+    <ClInclude Include="..\include\qpid\ImportExport.h" />
+    <ClInclude Include="..\include\qpid\log\Compile.h" />
+    <ClInclude Include="..\include\qpid\log\Helpers.h" />
+    <ClInclude Include="..\include\qpid\log\Logger.h" />
+    <ClInclude Include="..\include\qpid\log\Options.h" />
+    <ClInclude Include="..\include\qpid\log\OstreamOutput.h" />
+    <ClInclude Include="..\include\qpid\log\Selector.h" />
+    <ClInclude Include="..\include\qpid\log\SinkOptions.h" />
+    <ClInclude Include="..\include\qpid\log\Statement.h" />
+    <ClInclude Include="..\include\qpid\log\windows\SinkOptions.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

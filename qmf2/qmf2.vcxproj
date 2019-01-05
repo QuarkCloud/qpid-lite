@@ -185,7 +185,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;QMF2_EXPORT;qmf2_EXPORTS;_WINDOWS;_USRDLL;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;QMF2_EXPORT;qmf2_EXPORTS;_WINDOWS;_USRDLL;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
@@ -195,7 +195,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qpidsysd.lib;qpidlogd.lib;qpidtypesd.lib;qpidframingd.lib;</AdditionalDependencies>
+      <AdditionalDependencies>qpidsysd.lib;qpidlogd.lib;qpidtypesd.lib;qpidframingd.lib;qpidclientd.lib;qpidmessagingd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
