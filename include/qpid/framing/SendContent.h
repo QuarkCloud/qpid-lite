@@ -40,13 +40,13 @@ class SendContent
 {
     FrameHandler& handler;
     const uint16_t maxFrameSize;
-    uint expectedFrameCount;
-    uint frameCount;
+    uint32_t expectedFrameCount;
+	uint32_t frameCount;
 
     void sendFragment(const AMQContentBody& body, uint32_t offset, uint16_t size, bool first, bool last) const;
     void setFlags(AMQFrame& f, bool first, bool last) const;
 public:
-    QPID_FRAMING_EXTERN SendContent(FrameHandler& _handler, uint16_t _maxFrameSize, uint frameCount);
+    QPID_FRAMING_EXTERN SendContent(FrameHandler& _handler, uint16_t _maxFrameSize, uint32_t frameCount);
     QPID_FRAMING_EXTERN void operator()(const AMQFrame& f);
 };
 

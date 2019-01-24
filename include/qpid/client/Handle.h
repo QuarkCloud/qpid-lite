@@ -22,7 +22,7 @@
  *
  */
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 
 namespace qpid {
 namespace client {

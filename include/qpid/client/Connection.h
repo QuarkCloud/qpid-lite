@@ -24,7 +24,7 @@
 #include <map>
 #include <string>
 #include "qpid/client/Session.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/client/ConnectionSettings.h"
 #include "qpid/framing/ProtocolVersion.h"
 
@@ -219,7 +219,7 @@ class QPID_CLIENT_CLASS_EXTERN Connection
     QPID_CLIENT_EXTERN const ConnectionSettings& getNegotiatedSettings() const;
 
   friend struct ConnectionAccess; ///<@internal
-  friend class SessionBase_0_10; ///<@internal
+  friend class SessionBase0_10; ///<@internal
 };
 
 }} // namespace qpid::client

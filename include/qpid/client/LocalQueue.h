@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_LOCALQUEUE_H
-#define QPID_CLIENT_LOCALQUEUE_H
+#ifndef QPID_CLIENT_LOCAL_QUEUE_H
+#define QPID_CLIENT_LOCAL_QUEUE_H 1
 
 /*
  *
@@ -22,7 +22,7 @@
  *
  */
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/client/Handle.h"
 #include "qpid/client/Message.h"
 #include "qpid/sys/Time.h"
@@ -88,7 +88,7 @@ class QPID_CLIENT_CLASS_EXTERN LocalQueue : public Handle<LocalQueueImpl> {
      *@param timeout wait up this timeout for a message to appear.
      *@return true if result was set, false if queue was empty after timeout.
      */
-    QPID_CLIENT_EXTERN bool get(Message& result, sys::Duration timeout=0);
+    QPID_CLIENT_EXTERN bool get(Message& result, sys::NanoDuration timeout=0);
 
     /** Get the next message off the local queue, or wait up to the timeout
      * for message from the broker queue.
@@ -96,10 +96,10 @@ class QPID_CLIENT_CLASS_EXTERN LocalQueue : public Handle<LocalQueueImpl> {
      *@return message from the queue.
      *@throw ClosedException if subscription is closed or timeout exceeded.
      */
-    QPID_CLIENT_EXTERN Message get(sys::Duration timeout=sys::TIME_INFINITE);
+    QPID_CLIENT_EXTERN Message get(sys::NanoDuration timeout=sys::TIME_INFINITE);
 
     /** Synonym for get() */
-    QPID_CLIENT_EXTERN Message pop(sys::Duration timeout=sys::TIME_INFINITE);
+    QPID_CLIENT_EXTERN Message pop(sys::NanoDuration timeout=sys::TIME_INFINITE);
 
     /** Return true if local queue is empty. */
     QPID_CLIENT_EXTERN bool empty() const;
@@ -117,4 +117,4 @@ class QPID_CLIENT_CLASS_EXTERN LocalQueue : public Handle<LocalQueueImpl> {
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_LOCALQUEUE_H*/
+#endif  /*!QPID_CLIENT_LOCAL_QUEUE_H*/

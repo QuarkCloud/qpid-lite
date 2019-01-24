@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_QUEUE_OPTIONS_H
+#define QPID_CLIENT_QUEUE_OPTIONS_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,77 +22,74 @@
  *
  */
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/framing/FieldTable.h"
 
-#ifndef _QueueOptions_
-#define _QueueOptions_
 
 namespace qpid {
-namespace client {
+	namespace client {
 
-enum QueueSizePolicy {NONE, REJECT, FLOW_TO_DISK, RING, RING_STRICT};
-enum QueueOrderingPolicy {FIFO, LVQ, LVQ_NO_BROWSE};
+		enum QueueSizePolicy { NONE, REJECT, FLOW_TO_DISK, RING, RING_STRICT };
+		enum QueueOrderingPolicy { FIFO, LVQ, LVQ_NO_BROWSE };
 
-/**
- * A help class to set options on the Queue. Create a configured args while
- * still allowing any custom configuration via the FieldTable base class
- */
-class QPID_CLIENT_CLASS_EXTERN QueueOptions: public framing::FieldTable
-{
-  public:
-    QPID_CLIENT_EXTERN QueueOptions();
-    QPID_CLIENT_EXTERN virtual ~QueueOptions();
+		/**
+		 * A help class to set options on the Queue. Create a configured args while
+		 * still allowing any custom configuration via the FieldTable base class
+		 */
+		class QPID_CLIENT_CLASS_EXTERN QueueOptions : public framing::FieldTable
+		{
+		public:
+			QPID_CLIENT_EXTERN QueueOptions();
+			QPID_CLIENT_EXTERN virtual ~QueueOptions();
 
-    /**
-     * Sets the queue sizing policy
-     *
-     * @param sp SizePolicy
-     * REJECT - reject if queue greater than size/count
-     * FLOW_TO_DISK - page messages to disk from this point is greater than size/count
-     * RING - limit the queue to size/count and over-write old messages round a ring
-     * RING_STRICT - limit the queue to size/count and reject is head == tail
-     * NONE - Use default broker sizing policy
-     * @param maxSize Set the max number of bytes for the sizing policies
-     * @param setMaxCount Set the max number of messages for the sizing policies
-     */
-    QPID_CLIENT_EXTERN void setSizePolicy(QueueSizePolicy sp, uint64_t maxSize, uint32_t maxCount );
+			/**
+			 * Sets the queue sizing policy
+			 *
+			 * @param sp SizePolicy
+			 * REJECT - reject if queue greater than size/count
+			 * FLOW_TO_DISK - page messages to disk from this point is greater than size/count
+			 * RING - limit the queue to size/count and over-write old messages round a ring
+			 * RING_STRICT - limit the queue to size/count and reject is head == tail
+			 * NONE - Use default broker sizing policy
+			 * @param maxSize Set the max number of bytes for the sizing policies
+			 * @param setMaxCount Set the max number of messages for the sizing policies
+			 */
+			QPID_CLIENT_EXTERN void setSizePolicy(QueueSizePolicy sp, uint64_t maxSize, uint32_t maxCount);
 
-    /**
-     * Sets the odering policy on the Queue, default ordering is FIFO.
-     */
-    QPID_CLIENT_EXTERN void setOrdering(QueueOrderingPolicy op);
+			/**
+			 * Sets the odering policy on the Queue, default ordering is FIFO.
+			 */
+			QPID_CLIENT_EXTERN void setOrdering(QueueOrderingPolicy op);
 
-    /**
-     * Use broker defualt sizing ploicy
-     */
-    QPID_CLIENT_EXTERN void clearSizePolicy();
+			/**
+			 * Use broker defualt sizing ploicy
+			 */
+			QPID_CLIENT_EXTERN void clearSizePolicy();
 
-    /**
-     * get the key used match LVQ in args for message transfer
-     */
-    QPID_CLIENT_EXTERN void getLVQKey(std::string& key);
+			/**
+			 * get the key used match LVQ in args for message transfer
+			 */
+			QPID_CLIENT_EXTERN void getLVQKey(std::string& key);
 
-    /**
-     * Use default odering policy
-     */
-    QPID_CLIENT_EXTERN void clearOrdering();
+			/**
+			 * Use default odering policy
+			 */
+			QPID_CLIENT_EXTERN void clearOrdering();
 
-    static QPID_CLIENT_EXTERN const std::string strMaxCountKey;
-    static QPID_CLIENT_EXTERN const std::string strMaxSizeKey;
-    static QPID_CLIENT_EXTERN const std::string strTypeKey;
-    static QPID_CLIENT_EXTERN const std::string strREJECT;
-    static QPID_CLIENT_EXTERN const std::string strFLOW_TO_DISK;
-    static QPID_CLIENT_EXTERN const std::string strRING;
-    static QPID_CLIENT_EXTERN const std::string strRING_STRICT;
-    static QPID_CLIENT_EXTERN const std::string strLastValueQueue;
-    static QPID_CLIENT_EXTERN const std::string strLVQMatchProperty;
-    static QPID_CLIENT_EXTERN const std::string strLastValueQueueNoBrowse;
-    static QPID_CLIENT_EXTERN const std::string strQueueEventMode;
-};
+			static QPID_CLIENT_EXTERN const std::string strMaxCountKey;
+			static QPID_CLIENT_EXTERN const std::string strMaxSizeKey;
+			static QPID_CLIENT_EXTERN const std::string strTypeKey;
+			static QPID_CLIENT_EXTERN const std::string strREJECT;
+			static QPID_CLIENT_EXTERN const std::string strFLOW_TO_DISK;
+			static QPID_CLIENT_EXTERN const std::string strRING;
+			static QPID_CLIENT_EXTERN const std::string strRING_STRICT;
+			static QPID_CLIENT_EXTERN const std::string strLastValueQueue;
+			static QPID_CLIENT_EXTERN const std::string strLVQMatchProperty;
+			static QPID_CLIENT_EXTERN const std::string strLastValueQueueNoBrowse;
+			static QPID_CLIENT_EXTERN const std::string strQueueEventMode;
+		};
 
+	}
 }
-}
 
-
-#endif
+#endif  /**QPID_CLIENT_QUEUE_OPTIONS_H*/

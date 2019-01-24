@@ -19,8 +19,8 @@
  *
  */
 
-#ifndef _ConnectionImpl_
-#define _ConnectionImpl_
+#ifndef QPID_CLIENT_CONNECTION_IMPL_H
+#define QPID_CLIENT_CONNECTION_IMPL_H 1
 
 #include "qpid/client/Bounds.h"
 #include "qpid/client/ConnectionHandler.h"
@@ -104,4 +104,4 @@ QPID_CLIENT_EXTERN void shutdown();
 }}
 
 
-#endif
+#endif /**QPID_CLIENT_CONNECTION_IMPL_H*/

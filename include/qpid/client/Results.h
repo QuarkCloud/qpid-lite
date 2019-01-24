@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_RESULTS_H
+#define QPID_CLIENT_RESULTS_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -23,34 +26,30 @@
 #include <map>
 #include <boost/shared_ptr.hpp>
 
-#ifndef _Results_
-#define _Results_
 
 namespace qpid {
-namespace client {
+	namespace client {
 
-class FutureResult;
+		class FutureResult;
 
-///@internal
-class Results
-{
-public:
-    typedef boost::shared_ptr<FutureResult> FutureResultPtr;
+		///@internal
+		class Results
+		{
+		public:
+			typedef boost::shared_ptr<FutureResult> FutureResultPtr;
 
-    Results();
-    ~Results();
-    void completed(const framing::SequenceSet& set);
-    void received(const framing::SequenceNumber& id, const std::string& result);
-    FutureResultPtr listenForResult(const framing::SequenceNumber& point);
-    void close();
+			Results();
+			~Results();
+			void completed(const framing::SequenceSet& set);
+			void received(const framing::SequenceNumber& id, const std::string& result);
+			FutureResultPtr listenForResult(const framing::SequenceNumber& point);
+			void close();
 
-private:
-    typedef std::map<framing::SequenceNumber, FutureResultPtr> Listeners;    
-    Listeners listeners;
-};
+		private:
+			typedef std::map<framing::SequenceNumber, FutureResultPtr> Listeners;
+			Listeners listeners;
+		};
 
+	}
 }
-}
-
-
-#endif
+#endif  /**QPID_CLIENT_RESULTS_H*/

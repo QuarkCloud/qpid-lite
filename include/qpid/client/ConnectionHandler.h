@@ -18,8 +18,8 @@
  * under the License.
  *
  */
-#ifndef _ConnectionHandler_
-#define _ConnectionHandler_
+#ifndef QPID_CLIENT_CONNECTION_HANDLER_H
+#define QPID_CLIENT_CONNECTION_HANDLER_H 1
 
 #include "qpid/client/ChainableFrameHandler.h"
 #include "qpid/client/ConnectionSettings.h"
@@ -136,4 +136,4 @@ public:
 
 }}
 
-#endif
+#endif /**QPID_CLIENT_CONNECTION_HANDLER_H*/

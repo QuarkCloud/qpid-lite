@@ -42,14 +42,14 @@ namespace sys {
 class TimerWarnings
 {
   public:
-    TimerWarnings(Duration reportInterval);
+    TimerWarnings(NanoDuration reportInterval);
 
-    void late(const std::string& task, Duration delay);
+    void late(const std::string& task, NanoDuration delay);
 
-    void overran(const std::string& task, Duration overrun, Duration time);
+    void overran(const std::string& task, NanoDuration overrun, NanoDuration time);
 
     void lateAndOverran(const std::string& task,
-                        Duration delay, Duration overrun, Duration time);
+		NanoDuration delay, NanoDuration overrun, NanoDuration time);
 
   private:
     struct Statistic {
@@ -72,7 +72,7 @@ class TimerWarnings
 
     void log();
 
-    Duration interval;
+    NanoDuration interval;
     AbsTime nextReport;
     TaskStatsMap taskStats;
 };

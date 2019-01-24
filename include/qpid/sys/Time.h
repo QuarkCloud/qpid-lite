@@ -23,23 +23,29 @@
  */
 #include "qpid/sys/Compile.h"
 #include "qpid/sys/IntegerTypes.h"
+
+#if defined (WIN32) || defined(_WINDOWS)
+#include <boost/date_time/posix_time/posix_time_types.hpp>
+#endif
+
 /*
  * The platform defines its notion of time as a TimePrivate type. The
  * platform's implementation knows how to handle this type.
  */
-#if defined (_WIN32)
-#  include "windows/Time.h"
-#else
-#  include "posix/Time.h"
-#endif
-
 #include <limits>
 #include <iosfwd>
 
 namespace qpid {
 namespace sys {
 
-class Duration;
+#if defined (WIN32) || defined(_WINDOWS)
+	typedef boost::posix_time::ptime TimePrivate;
+#else
+	typedef int64_t TimePrivate;
+#endif
+
+
+class NanoDuration;
 
 /**
  * @class AbsTime
@@ -76,7 +82,7 @@ class Duration;
  * doesn't make sense.
  */
 class AbsTime {
-    friend class Duration;
+    friend class NanoDuration;
     friend class Condition;
 
     TimePrivate timepoint;
@@ -84,7 +90,7 @@ class AbsTime {
 public:
 
     inline AbsTime() : timepoint() {}
-    QPID_SYS_EXTERN AbsTime(const AbsTime& time0, const Duration& duration);
+    QPID_SYS_EXTERN AbsTime(const AbsTime& time0, const NanoDuration& duration);
     // Default assignment operation fine
     // Default copy constructor fine
 
@@ -111,24 +117,24 @@ QPID_SYS_EXTERN std::ostream& operator << (std::ostream&, const AbsTime&);
  * with like a 64 bit integer, and indeed there is an implicit conversion which
  * makes this quite convenient.
  */
-class Duration {
+class NanoDuration {
+private:
     static int64_t max() { return std::numeric_limits<int64_t>::max(); }
     int64_t nanosecs;
 
     friend class AbsTime;
-
 public:
-    QPID_SYS_INLINE_EXTERN inline Duration(int64_t time0 = 0);
-	QPID_SYS_EXTERN explicit Duration(const AbsTime& start, const AbsTime& finish);
+	QPID_SYS_INLINE_EXTERN inline NanoDuration(int64_t time0 = 0) : nanosecs(time0) {};
+	QPID_SYS_EXTERN explicit NanoDuration(const AbsTime& start, const AbsTime& finish);
 
     /** Duration since the Unix epoch: 1970-01-01T00:00:00 */
-	QPID_SYS_EXTERN static Duration FromEpoch();
+	QPID_SYS_EXTERN static NanoDuration FromEpoch();
 
-    inline operator int64_t() const;
+    inline operator int64_t()  const { return nanosecs; }
 };
 
-QPID_SYS_EXTERN std::ostream& operator << (std::ostream&, const Duration&);
-QPID_SYS_EXTERN std::istream& operator >> (std::istream&, Duration&);
+QPID_SYS_EXTERN std::ostream& operator << (std::ostream&, const NanoDuration&);
+QPID_SYS_EXTERN std::istream& operator >> (std::istream&, NanoDuration&);
 
 inline AbsTime now() { return AbsTime::now(); }
 
@@ -137,24 +143,17 @@ inline bool operator<(const AbsTime& a, const AbsTime& b)
 inline bool operator>(const AbsTime& a, const AbsTime& b)
 { return a.timepoint > b.timepoint; }
 
-Duration::Duration(int64_t time0) :
-    nanosecs(time0)
-{}
-
-Duration::operator int64_t() const
-{ return nanosecs; }
-
 /** Nanoseconds per second. */
-const Duration TIME_SEC  = 1000*1000*1000;
+const NanoDuration TIME_SEC  = 1000*1000*1000;
 /** Nanoseconds per millisecond */
-const Duration TIME_MSEC = 1000*1000;
+const NanoDuration TIME_MSEC = 1000*1000;
 /** Nanoseconds per microseconds. */
-const Duration TIME_USEC = 1000;
+const NanoDuration TIME_USEC = 1000;
 /** Nanoseconds per nanosecond. */
-const Duration TIME_NSEC = 1;
+const NanoDuration TIME_NSEC = 1;
 
 /** Value to represent an infinite timeout */
-const Duration TIME_INFINITE = std::numeric_limits<int64_t>::max();
+const NanoDuration TIME_INFINITE = std::numeric_limits<int64_t>::max();
 
 /** Absolute time zero point */
 const AbsTime ZERO = AbsTime::Zero();
@@ -173,6 +172,25 @@ QPID_SYS_EXTERN void outputFormattedNow(std::ostream&);
 
 /** Output unformatted nanosecond-resolution time for now */
 QPID_SYS_EXTERN void outputHiresNow(std::ostream&);
+
+
+class QPID_SYS_CLASS_EXTERN MilliDuration
+{
+public:
+	QPID_SYS_EXTERN explicit MilliDuration(uint64_t milliseconds);
+	QPID_SYS_EXTERN uint64_t getMilliseconds() const;
+	QPID_SYS_EXTERN static const MilliDuration FOREVER;
+	QPID_SYS_EXTERN static const MilliDuration IMMEDIATE;
+	QPID_SYS_EXTERN static const MilliDuration SECOND;
+	QPID_SYS_EXTERN static const MilliDuration MINUTE;
+private:
+	uint64_t milliseconds;
+};
+
+QPID_SYS_EXTERN MilliDuration operator*(const MilliDuration& duration, uint64_t multiplier);
+QPID_SYS_EXTERN MilliDuration operator*(uint64_t multiplier, const MilliDuration& duration);
+QPID_SYS_EXTERN bool operator==(const MilliDuration& a, const MilliDuration& b);
+QPID_SYS_EXTERN bool operator!=(const MilliDuration& a, const MilliDuration& b);
 
 }}
 

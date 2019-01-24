@@ -1,3 +1,5 @@
+#ifndef QPID_CLIENT_TCP_CONNECTOR_H
+#define QPID_CLIENT_TCP_CONNECTOR_H 1
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,10 +21,7 @@
  *
  */
 
-#ifndef _TCPConnector_
-#define _TCPConnector_
-
-#include "Connector.h"
+#include "qpid/client/Connector.h"
 #include "qpid/client/Bounds.h"
 #include "qpid/framing/AMQFrame.h"
 #include "qpid/sys/AsynchIO.h"
@@ -98,7 +97,7 @@ protected:
     void start(sys::AsynchIO* aio_);
     void initAmqp();
     virtual void connectFailed(const std::string& msg);
-    void readbuff(qpid::sys::AsynchIO&, qpid::sys::AsynchIOBufferBase*);
+    void readbuff(qpid::sys::AsynchIO&, qpid::sys::AsynchIO::BufferBase*);
     void writebuff(qpid::sys::AsynchIO&);
     void eof(qpid::sys::AsynchIO&);
     void disconnected(qpid::sys::AsynchIO&);
@@ -113,4 +112,4 @@ public:
 
 }}   // namespace qpid::client
 
-#endif  /* _TCPConnector_ */
+#endif  /* QPID_CLIENT_TCP_CONNECTOR_H */

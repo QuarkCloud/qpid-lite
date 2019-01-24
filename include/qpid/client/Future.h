@@ -1,3 +1,7 @@
+
+#ifndef QPID_CLIENT_FUATURE_H
+#define QPID_CLIENT_FUATURE_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,8 +23,6 @@
  *
  */
 
-#ifndef _Future_
-#define _Future_
 
 #include <boost/bind.hpp>
 #include <boost/shared_ptr.hpp>
@@ -28,7 +30,7 @@
 #include "qpid/framing/SequenceNumber.h"
 #include "qpid/client/FutureCompletion.h"
 #include "qpid/client/FutureResult.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 
 namespace qpid {
 namespace client {
@@ -56,4 +58,4 @@ public:
 
 }}
 
-#endif
+#endif  /**QPID_CLIENT_FUATURE_H*/

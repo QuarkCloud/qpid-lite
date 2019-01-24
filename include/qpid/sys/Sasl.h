@@ -26,12 +26,11 @@
 #include <string>
 #include "qpid/sys/Compile.h"
 #include "qpid/sys/IntegerTypes.h"
+#include "qpid/sys/SecurityLayer.h"
+#include "qpid/sys/SecuritySettings.h"
 
 namespace qpid {
-
 	namespace sys {
-		class SecurityLayer;
-		struct SecuritySettings;
 
 		/**
 		 * Interface to support for the SASL client role. This class is implemented by platform-specific

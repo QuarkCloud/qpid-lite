@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_FLOWCONTROL_H
-#define QPID_CLIENT_FLOWCONTROL_H
+#ifndef QPID_CLIENT_FLOW_CONTROL_H
+#define QPID_CLIENT_FLOW_CONTROL_H 1
 
 /*
  *
@@ -72,4 +72,4 @@ struct FlowControl {
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_FLOWCONTROL_H*/
+#endif  /*!QPID_CLIENT_FLOW_CONTROL_H*/

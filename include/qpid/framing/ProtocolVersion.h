@@ -29,10 +29,10 @@
 
 namespace qpid
 {
-namespace framing
-{
-	typedef qpid::sys::ProtocolVersion ProtocolVersion;
-} // namespace framing
+	namespace framing
+	{
+		typedef qpid::sys::ProtocolVersion ProtocolVersion;
+	} // namespace framing
 } // namespace qpid
 
 

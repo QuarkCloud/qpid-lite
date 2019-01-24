@@ -29,7 +29,6 @@
 #include <boost/noncopyable.hpp>
 #include <boost/thread/condition.hpp>
 #include <boost/thread/thread_time.hpp>
-#include <windows.h>
 
 namespace qpid {
 namespace sys {

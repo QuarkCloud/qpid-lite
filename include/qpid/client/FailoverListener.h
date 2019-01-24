@@ -22,7 +22,7 @@
  *
  */
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/client/MessageListener.h"
 #include "qpid/client/Connection.h"
 #include "qpid/client/Session.h"

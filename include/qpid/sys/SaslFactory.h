@@ -24,11 +24,11 @@
 #include "qpid/sys/Compile.h"
 #include "qpid/sys/Sasl.h"
 #include "qpid/sys/Mutex.h"
+#include "qpid/sys/SaslServer.h"
 #include <memory>
 
 namespace qpid {
 	namespace sys {
-		class SaslServer;
 		/**
 		 * Factory for instances of the Sasl interface through which Sasl
 		 * support is provided to a ConnectionHandler.

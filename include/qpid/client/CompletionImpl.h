@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_COMPLETIONIMPL_H
-#define QPID_CLIENT_COMPLETIONIMPL_H
+#ifndef QPID_CLIENT_COMPLETION_IMPL_H
+#define QPID_CLIENT_COMPLETION_IMPL_H 1
 
 /*
  *
@@ -24,7 +24,7 @@
 
 #include "qpid/sys/RefCounted.h"
 #include "qpid/client/Future.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include <boost/shared_ptr.hpp>
 
 namespace qpid {
@@ -49,4 +49,4 @@ protected:
 }} // namespace qpid::client
 
 
-#endif  /*!QPID_CLIENT_COMPLETIONIMPL_H*/
+#endif  /*!QPID_CLIENT_COMPLETION_IMPL_H*/

@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_SESSION_IMPL_H
+#define QPID_CLIENT_SESSION_IMPL_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,13 +22,10 @@
  *
  */
 
-#ifndef _SessionImpl_
-#define _SessionImpl_
-
 #include "qpid/client/Demux.h"
 #include "qpid/client/Execution.h"
 #include "qpid/client/Results.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 
 #include "qpid/client/SessionId.h"
 #include "qpid/client/SessionState.h"
@@ -217,4 +217,4 @@ private:
 
 }} // namespace qpid::client
 
-#endif
+#endif  /**QPID_CLIENT_SESSION_IMPL_H*/

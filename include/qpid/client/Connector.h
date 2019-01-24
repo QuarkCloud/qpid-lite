@@ -18,8 +18,8 @@
  * under the License.
  *
  */
-#ifndef _Connector_
-#define _Connector_
+#ifndef QPID_CLIENT_CONNECTOR_H
+#define QPID_CLIENT_CONNECTOR_H 1
 
 
 #include "qpid/framing/FrameHandler.h"
@@ -86,4 +86,4 @@ class Connector : public framing::FrameHandler
 }}
 
 
-#endif
+#endif /**QPID_CLIENT_CONNECTOR_H*/

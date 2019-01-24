@@ -1,3 +1,6 @@
+
+#ifndef QPID_CLIENT_LOAD_PLUGINS_H
+#define QPID_CLIENT_LOAD_PLUGINS_H 1
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,10 +22,8 @@
  *
  */
 
-#ifndef _LoadPlugins_
-#define _LoadPlugins_
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 
 namespace qpid {
 namespace client {
@@ -32,4 +33,4 @@ QPID_CLIENT_EXTERN void theModuleLoader();
 }}
 
 
-#endif
+#endif  /**QPID_CLIENT_LOAD_PLUGINS_H*/

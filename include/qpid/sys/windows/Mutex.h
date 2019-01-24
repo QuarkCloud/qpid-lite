@@ -19,8 +19,7 @@
  *
  */
 
-#include "qpid/sys/windows/check.h"
-
+#include "qpid/sys/MutexTemplate.h"
 #include <boost/version.hpp>
 #if (BOOST_VERSION < 103500)
 #error The Windows port requires Boost version 1.35.0 or later

@@ -29,6 +29,13 @@
 
 namespace qpid{
 	namespace sys {
+
+		struct DisableExceptionLogging
+		{
+			QPID_SYS_EXTERN DisableExceptionLogging();
+			QPID_SYS_EXTERN ~DisableExceptionLogging();
+		};
+
 	/**
 	 * Base class for Qpid runtime exceptions.
 	 */

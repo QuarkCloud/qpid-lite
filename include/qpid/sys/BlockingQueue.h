@@ -47,7 +47,7 @@ public:
      *@param timeout Defaults to infinite.
      *@return true if result was set, false if queue empty after timeout.
      */
-    bool pop(T& result, Duration timeout=TIME_INFINITE) {
+    bool pop(T& result, NanoDuration timeout=TIME_INFINITE) {
         Mutex::ScopedLock l(waitable);
         {
             Waitable::ScopedWait w(waitable);
@@ -70,7 +70,7 @@ public:
         return true;
     }
 
-    T pop(Duration timeout=TIME_INFINITE) {
+    T pop(NanoDuration timeout=TIME_INFINITE) {
         T result;
         bool ok = pop(result, timeout);
         if (!ok)

@@ -22,7 +22,7 @@
  *
  */
 
-#if defined (_WIN32)
+#if defined (WIN32) || defined(_WINDOWS)
 #include "windows/Condition.h"
 #else
 #include "posix/Condition.h"

@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_CONNECTIONACCESS_H
-#define QPID_CLIENT_CONNECTIONACCESS_H
+#ifndef QPID_CLIENT_CONNECTION_ACCESS_H
+#define QPID_CLIENT_CONNECTION_ACCESS_H 1
 
 /*
  *
@@ -39,4 +39,4 @@ struct ConnectionAccess {
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_CONNECTIONACCESS_H*/
+#endif  /*!QPID_CLIENT_CONNECTION_ACCESS_H*/

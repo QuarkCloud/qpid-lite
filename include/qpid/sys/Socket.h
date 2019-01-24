@@ -1,5 +1,5 @@
-#ifndef _sys_Socket_h
-#define _sys_Socket_h
+#ifndef QPID_SYS_SOCKET_H
+#define QPID_SYS_SOCKET_H 1
 
 /*
  *
@@ -29,7 +29,7 @@
 namespace qpid {
 namespace sys {
 
-class Duration;
+class NanoDuration;
 class IOHandle;
 class SocketAddress;
 
@@ -118,4 +118,4 @@ public:
 QPID_SYS_EXTERN Socket* createSocket();
 
 }}
-#endif  /*!_sys_Socket_h*/
+#endif  /*!QPID_SYS_SOCKET_H*/

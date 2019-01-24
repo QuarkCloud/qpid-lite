@@ -21,12 +21,13 @@
  * under the License.
  *
  */
+#include "qpid/sys/Compile.h"
 #include <string>
 #include <memory>
+#include "qpid/sys/SecurityLayer.h"
 
 namespace qpid {
 namespace sys {
-class SecurityLayer;
 
 /**
  *

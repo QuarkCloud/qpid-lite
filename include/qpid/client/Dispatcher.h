@@ -1,3 +1,5 @@
+#ifndef QPID_CLIENT_DISPATCHER_H
+#define QPID_CLIENT_DISPATCHER_H 1
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -18,19 +20,17 @@
  * under the License.
  *
  */
-#ifndef _Dispatcher_
-#define _Dispatcher_
 
 #include <map>
 #include <memory>
 #include <string>
 #include <boost/shared_ptr.hpp>
 #include "qpid/client/Session.h"
-#include "qpid/client/SessionBase_0_10Access.h"
+#include "qpid/client/SessionBase0_10Access.h"
 #include "qpid/sys/Mutex.h"
 #include "qpid/sys/Runnable.h"
 #include "qpid/sys/Thread.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/client/MessageListener.h"
 #include "qpid/client/SubscriptionImpl.h"
 
@@ -84,4 +84,4 @@ public:
 
 }}
 
-#endif
+#endif /**QPID_CLIENT_DISPATCHER_H*/

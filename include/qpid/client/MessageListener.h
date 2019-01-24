@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_MESSAGE_LISTENER_H
+#define QPID_CLIENT_MESSAGE_LISTENER_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,11 +22,7 @@
  *
  */
 #include <string>
-#include "qpid/client/ClientImportExport.h"
-
-#ifndef _MessageListener_
-#define _MessageListener_
-
+#include "qpid/client/Compile.h"
 #include "qpid/client/Message.h"
 
 namespace qpid {
@@ -97,5 +96,4 @@ namespace client {
 }
 }
 
-
-#endif
+#endif  /**QPID_CLIENT_MESSAGE_LISTENER_H*/

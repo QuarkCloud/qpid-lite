@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_DEMUX_H
+#define QPID_CLIENT_DEMUX_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -25,10 +28,7 @@
 #include "qpid/framing/FrameSet.h"
 #include "qpid/sys/Mutex.h"
 #include "qpid/sys/BlockingQueue.h"
-#include "qpid/client/ClientImportExport.h"
-
-#ifndef _Demux_
-#define _Demux_
+#include "qpid/client/Compile.h"
 
 namespace qpid {
 namespace client {
@@ -100,4 +100,4 @@ public:
 }} // namespace qpid::client
 
 
-#endif
+#endif /**QPID_CLIENT_DEMUX_H*/

@@ -23,7 +23,7 @@
  */
 
 #include "qpid/client/Handle.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include <string>
 
 namespace qpid {

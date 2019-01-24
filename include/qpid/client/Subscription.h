@@ -26,7 +26,7 @@
 #include "qpid/client/Session.h"
 #include "qpid/client/SubscriptionSettings.h"
 #include "qpid/client/Message.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 
 namespace qpid {
 namespace client {

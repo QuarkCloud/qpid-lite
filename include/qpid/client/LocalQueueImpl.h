@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_LOCALQUEUEIMPL_H
-#define QPID_CLIENT_LOCALQUEUEIMPL_H
+#ifndef QPID_CLIENT_LOCAL_QUEUE_IMPL_H
+#define QPID_CLIENT_LOCAL_QUEUE_IMPL_H 1
 
 /*
  *
@@ -22,7 +22,7 @@
  *
  */
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/client/Handle.h"
 #include "qpid/client/Message.h"
 #include "qpid/client/Subscription.h"
@@ -78,7 +78,7 @@ class LocalQueueImpl : public sys::RefCounted {
      *@param timeout wait up this timeout for a message to appear. 
      *@return true if result was set, false if queue was empty after timeout.
      */
-     bool get(Message& result, sys::Duration timeout=0);
+     bool get(Message& result, sys::NanoDuration timeout=0);
 
     /** Get the next message off the local queue, or wait up to the timeout
      * for message from the broker queue.
@@ -86,10 +86,10 @@ class LocalQueueImpl : public sys::RefCounted {
      *@return message from the queue.
      *@throw ClosedException if subscription is closed or timeout exceeded.
      */
-     Message get(sys::Duration timeout=sys::TIME_INFINITE);
+     Message get(sys::NanoDuration timeout=sys::TIME_INFINITE);
 
     /** Synonym for get() */
-     Message pop(sys::Duration timeout=sys::TIME_INFINITE);
+     Message pop(sys::NanoDuration timeout=sys::TIME_INFINITE);
 
     /** Return true if local queue is empty. */
      bool empty() const;
@@ -105,4 +105,4 @@ class LocalQueueImpl : public sys::RefCounted {
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_LOCALQUEUEIMPL_H*/
+#endif  /*!QPID_CLIENT_LOCAL_QUEUE_IMPL_H*/

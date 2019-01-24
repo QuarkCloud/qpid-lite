@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_FUTURE_COMPLETION_H
+#define QPID_CLIENT_FUTURE_COMPLETION_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,8 +22,7 @@
  *
  */
 
-#ifndef _FutureCompletion_
-#define _FutureCompletion_
+
 
 #include "qpid/framing/amqp_framing.h"
 #include "qpid/sys/Monitor.h"
@@ -45,5 +47,4 @@ public:
 
 }}
 
-
-#endif
+#endif  /**QPID_CLIENT_FUTURE_COMPLETION_H*/

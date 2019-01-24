@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_CONNECTIONSETTINGS_H
-#define QPID_CLIENT_CONNECTIONSETTINGS_H
+#ifndef QPID_CLIENT_CONNECTION_SETTINGS_H
+#define QPID_CLIENT_CONNECTION_SETTINGS_H 1
 
 /*
  *
@@ -22,124 +22,126 @@
  *
  */
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/framing/FieldTable.h"
 #include "qpid/sys/IntegerTypes.h"
+#include "qpid/sys/ConnectionSettings.h"
 #include <string>
 
 namespace qpid {
 
-namespace sys {
-class Socket;
-}
+	namespace sys {
+		class Socket;
+	}
 
-namespace client {
+	namespace client {
 
-/**
- * Settings for a Connection.
- */
-struct QPID_CLIENT_CLASS_EXTERN ConnectionSettings {
+		/**
+		 * Settings for a Connection.
+		 */
+		struct QPID_CLIENT_CLASS_EXTERN ConnectionSettings : public sys::ConnectionSettings{
 
-    QPID_CLIENT_EXTERN ConnectionSettings();
-    QPID_CLIENT_EXTERN virtual ~ConnectionSettings();
+			QPID_CLIENT_EXTERN ConnectionSettings();
+			QPID_CLIENT_EXTERN virtual ~ConnectionSettings();
 
-    /**
-     * Allows socket to be configured; default only sets tcp-nodelay
-     * based on the flag set. Can be overridden.
-     */
-    QPID_CLIENT_EXTERN virtual void configureSocket(qpid::sys::Socket&) const;
+			/**
+			 * Allows socket to be configured; default only sets tcp-nodelay
+			 * based on the flag set. Can be overridden.
+			 */
+			QPID_CLIENT_EXTERN virtual void configureSocket(qpid::sys::Socket&) const;
 
-    /**
-     * The protocol used for the connection (defaults to 'tcp')
-     */
-    std::string protocol;
+			/**
+			 * The protocol used for the connection (defaults to 'tcp')
+			 */
+			std::string protocol;
 
-    /**
-     * The host (or ip address) to connect to (defaults to 'localhost').
-     */
-    std::string host;
-    /**
-     * The port to connect to (defaults to 5672).
-     */
-    uint16_t port;
-    /**
-     * Allows an AMQP 'virtual host' to be specified for the
-     * connection.
-     */
-    std::string virtualhost;
+			/**
+			 * The host (or ip address) to connect to (defaults to 'localhost').
+			 */
+			std::string host;
+			/**
+			 * The port to connect to (defaults to 5672).
+			 */
+			uint16_t port;
+			/**
+			 * Allows an AMQP 'virtual host' to be specified for the
+			 * connection.
+			 */
+			std::string virtualhost;
 
-    /**
-     * The username to use when authenticating the connection. If not
-     * specified the current users login is used if available.
-     */
-    std::string username;
-    /**
-     * The password to use when authenticating the connection.
-     */
-    std::string password;
-    /**
-     * The SASL mechanism to use when authenticating the connection;
-     * the options are currently PLAIN or ANONYMOUS.
-     */
-    std::string mechanism;
-    /**
-     * Allows a locale to be specified for the connection.
-     */
-    std::string locale;
-    /**
-     * Allows a heartbeat frequency to be specified
-     */
-    uint16_t heartbeat;
-    /**
-     * The maximum number of channels that the client will request for
-     * use on this connection.
-     */
-    uint16_t maxChannels;
-    /**
-     * The maximum frame size that the client will request for this
-     * connection.
-     */
-    uint16_t maxFrameSize;
-    /**
-     * Limit the size of the connections send buffer . The buffer
-     * is limited to bounds * maxFrameSize.
-     */
-    unsigned int bounds;
-    /**
-     * If true, TCP_NODELAY will be set for the connection.
-     */
-    bool tcpNoDelay;
-    /**
-     * SASL service name
-     */
-    std::string service;
-    /**
-     * Minimum acceptable strength of any SASL negotiated security
-     * layer. 0 means no security layer required.
-     */
-    unsigned int minSsf;
-    /**
-     * Maximum acceptable strength of any SASL negotiated security
-     * layer. 0 means no security layer allowed.
-     */
-    unsigned int maxSsf;
-    /**
-     * SSL cert-name for the connection. Overrides global SSL
-     * settings. Used only when a client connects to the broker.
-     */
-    std::string sslCertName;
+			/**
+			 * The username to use when authenticating the connection. If not
+			 * specified the current users login is used if available.
+			 */
+			std::string username;
+			/**
+			 * The password to use when authenticating the connection.
+			 */
+			std::string password;
+			/**
+			 * The SASL mechanism to use when authenticating the connection;
+			 * the options are currently PLAIN or ANONYMOUS.
+			 */
+			std::string mechanism;
+			/**
+			 * Allows a locale to be specified for the connection.
+			 */
+			std::string locale;
+			/**
+			 * Allows a heartbeat frequency to be specified
+			 */
+			uint16_t heartbeat;
+			/**
+			 * The maximum number of channels that the client will request for
+			 * use on this connection.
+			 */
+			uint16_t maxChannels;
+			/**
+			 * The maximum frame size that the client will request for this
+			 * connection.
+			 */
+			uint16_t maxFrameSize;
+			/**
+			 * Limit the size of the connections send buffer . The buffer
+			 * is limited to bounds * maxFrameSize.
+			 */
+			unsigned int bounds;
+			/**
+			 * If true, TCP_NODELAY will be set for the connection.
+			 */
+			bool tcpNoDelay;
+			/**
+			 * SASL service name
+			 */
+			std::string service;
+			/**
+			 * Minimum acceptable strength of any SASL negotiated security
+			 * layer. 0 means no security layer required.
+			 */
+			unsigned int minSsf;
+			/**
+			 * Maximum acceptable strength of any SASL negotiated security
+			 * layer. 0 means no security layer allowed.
+			 */
+			unsigned int maxSsf;
+			/**
+			 * SSL cert-name for the connection. Overrides global SSL
+			 * settings. Used only when a client connects to the broker.
+			 */
+			std::string sslCertName;
 
-    /**
-     * Passed as client-propreties on opening the connecction.
-     */
-    framing::FieldTable clientProperties;
+			/**
+			 * Passed as client-propreties on opening the connecction.
+			 */
+			framing::FieldTable clientProperties;
 
-    /**
-     * If using SSL, connect regardless of hostname verification failure.
-     */
-    bool sslIgnoreHostnameVerificationFailure;
-};
+			/**
+			 * If using SSL, connect regardless of hostname verification failure.
+			 */
+			bool sslIgnoreHostnameVerificationFailure;
+		};
 
-}} // namespace qpid::client
+	}
+}// namespace qpid::client
 
-#endif  /*!QPID_CLIENT_CONNECTIONSETTINGS_H*/
+#endif  /*!QPID_CLIENT_CONNECTION_SETTINGS_H*/

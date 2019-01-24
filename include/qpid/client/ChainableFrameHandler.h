@@ -19,29 +19,27 @@
  *
  */
 
-#ifndef _ChainableFrameHandler_
-#define _ChainableFrameHandler_
+#ifndef QPID_CLIENT_CHAINABLE_FRAME_HANDLER_H
+#define QPID_CLIENT_CHAINABLE_FRAME_HANDLER_H 1
 
 #include <boost/function.hpp>
 #include "qpid/framing/AMQFrame.h"
 
 namespace qpid {
-namespace client {
+	namespace client {
 
-struct ChainableFrameHandler
-{
-    typedef boost::function<void(framing::AMQFrame&)> FrameDelegate;
+		struct ChainableFrameHandler
+		{
+			typedef boost::function<void(framing::AMQFrame&)> FrameDelegate;
 
-    FrameDelegate in;
-    FrameDelegate out;
+			FrameDelegate in;
+			FrameDelegate out;
 
-    ChainableFrameHandler() {}
-    ChainableFrameHandler(FrameDelegate i, FrameDelegate o): in(i), out(o) {}
-    virtual ~ChainableFrameHandler() {}
-};
+			ChainableFrameHandler() {}
+			ChainableFrameHandler(FrameDelegate i, FrameDelegate o) : in(i), out(o) {}
+			virtual ~ChainableFrameHandler() {}
+		};
 
-}}
-
-
-
-#endif
+	}
+}
+#endif /**QPID_CLIENT_CHAINABLE_FRAME_HANDLER_H*/

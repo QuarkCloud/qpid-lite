@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_SUBSCRIPTIONMANAGERIMPL_H
-#define QPID_CLIENT_SUBSCRIPTIONMANAGERIMPL_H
+#ifndef QPID_CLIENT_SUBSCRIPTION_MANAGER_IMPL_H
+#define QPID_CLIENT_SUBSCRIPTION_MANAGER_IMPL_H 1
 
 /*
  *
@@ -166,14 +166,14 @@ class SubscriptionManagerImpl : public sys::Runnable, public sys::RefCounted
      *@param timeout wait up this timeout for a message to appear. 
      *@return true if result was set, false if no message available after timeout.
      */
-    bool get(Message& result, const std::string& queue, sys::Duration timeout=0);
+    bool get(Message& result, const std::string& queue, sys::NanoDuration timeout=0);
 
     /** Get a single message from a queue.
      *@param timeout wait up this timeout for a message to appear. 
      *@return message from the queue.
      *@throw Exception if the timeout is exceeded.
      */
-    Message get(const std::string& queue, sys::Duration timeout=sys::TIME_INFINITE);
+    Message get(const std::string& queue, sys::NanoDuration timeout=sys::TIME_INFINITE);
 
     /** Get a subscription by name.
      *@throw Exception if not found.
@@ -276,4 +276,4 @@ class SubscriptionManagerImpl : public sys::Runnable, public sys::RefCounted
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_SUBSCRIPTIONMANAGERIMPL_H*/
+#endif  /*!QPID_CLIENT_SUBSCRIPTION_MANAGER_IMPL_H*/

@@ -23,7 +23,6 @@
 
 #include "qpid/sys/Monitor.h"
 #include "qpid/sys/OutputTask.h"
-
 #include "qpid/sys/Compile.h"
 
 #include <algorithm>

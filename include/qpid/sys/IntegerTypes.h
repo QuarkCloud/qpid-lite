@@ -21,11 +21,30 @@
  *
  */
 
-#if (defined(_WINDOWS) || defined (WIN32))
-#include "qpid/sys/windows/IntegerTypes.h"
-#endif
-#if !defined _WINDOWS && !defined WIN32
-#include "qpid/sys/posix/IntegerTypes.h"
+#if defined (WIN32) || defined(_WINDOWS)
+
+	#if _MSC_VER < 1800
+	#include <stdlib.h>
+	#define strtoull _strtoui64
+	#include <limits.h>
+	#endif
+
+	#if _MSC_VER < 1600
+		typedef unsigned char    uint8_t;
+		typedef signed char      int8_t;
+		typedef unsigned short   uint16_t;
+		typedef short            int16_t;
+		typedef unsigned int     uint32_t;
+		typedef int              int32_t;
+		typedef unsigned __int64 uint64_t;
+		typedef          __int64 int64_t;
+		#define INT64_MAX _I64_MAX
+		#define INT64_MIN _I64_MIN
+	#else
+		#include <stdint.h>
+	#endif
+#else
+	#include <stdint.h>
 #endif
 
 #endif  /*!QPID_SYS_INTEGER_TYPES_H*/

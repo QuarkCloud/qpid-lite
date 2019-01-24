@@ -46,7 +46,7 @@ class TimerTask : public RefCounted {
 
     std::string name;
     AbsTime sortTime;
-    Duration period;
+	NanoDuration period;
     AbsTime nextFireTime;
     qpid::sys::Monitor stateMonitor;
     enum {WAITING, CALLING, CANCELLED} state;
@@ -66,7 +66,7 @@ class TimerTask : public RefCounted {
      * Before it has been triggered you can use restart() to push off
      * triggering the TimerTask by the specified duration.
      */
-    QPID_SYS_EXTERN TimerTask(Duration period, const std::string& name);
+    QPID_SYS_EXTERN TimerTask(NanoDuration period, const std::string& name);
 
     /** Create a TimerTask that fires at a given absolute time
      *
@@ -153,9 +153,9 @@ class Timer : private Runnable {
 	  QPID_SYS_EXTERN virtual void fire(boost::intrusive_ptr<TimerTask> task);
 
     // Allow derived classes to change the late/overran thresholds.
-    Duration late;
-    Duration overran;
-    Duration lateCancel;
+	NanoDuration late;
+	NanoDuration overran;
+	NanoDuration lateCancel;
     TimerWarnings warn;
 };
 

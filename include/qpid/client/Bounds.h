@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_BOUNDSCHECKING_H
-#define QPID_CLIENT_BOUNDSCHECKING_H
+#ifndef QPID_CLIENT_BOUNDS_CHECKING_H
+#define QPID_CLIENT_BOUNDS_CHECKING_H 1
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -22,28 +22,27 @@
  */
 #include "qpid/sys/Waitable.h"
 
-namespace qpid{
-namespace client{
+namespace qpid {
+	namespace client {
 
-class Bounds
-{
-  public:
-    Bounds(size_t maxSize);
-    bool expand(size_t, bool block);
-    void reduce(size_t);
-    size_t getCurrentSize();
-    void setException(const sys::ExceptionHolder&);
-    
-  private:
-    friend std::ostream& operator<<(std::ostream&, const Bounds&);
-    sys::Waitable lock;
-    const size_t max;
-    size_t current;
-};
+		class Bounds
+		{
+		public:
+			Bounds(size_t maxSize);
+			bool expand(size_t, bool block);
+			void reduce(size_t);
+			size_t getCurrentSize();
+			void setException(const sys::ExceptionHolder&);
 
-std::ostream& operator<<(std::ostream&, const Bounds&);
+		private:
+			friend std::ostream& operator<<(std::ostream&, const Bounds&);
+			sys::Waitable lock;
+			const size_t max;
+			size_t current;
+		};
 
+		std::ostream& operator<<(std::ostream&, const Bounds&);
 
-}}
-
-#endif
+	}
+}
+#endif /**QPID_CLIENT_BOUNDS_CHECKING_H*/

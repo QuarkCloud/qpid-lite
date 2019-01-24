@@ -21,17 +21,17 @@
  * under the License.
  *
  */
-#include "qpid/client/Session_0_10.h"
+#include "qpid/client/Session0_10.h"
 
 namespace qpid {
 namespace client {
 
 /**
- * Session is an alias for Session_0_10
+ * Session is an alias for Session0_10
  *
  * \ingroup clientapi
  */
-typedef Session_0_10 Session;
+typedef Session0_10 Session;
 
 
 }} // namespace qpid::client

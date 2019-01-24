@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_SUBSCRIPTIONIMPL_H
-#define QPID_CLIENT_SUBSCRIPTIONIMPL_H
+#ifndef QPID_CLIENT_SUBSCRIPTION_IMPL_H
+#define QPID_CLIENT_SUBSCRIPTION_IMPL_H 1
 
 /*
  *
@@ -31,7 +31,7 @@
 #include "qpid/framing/SequenceSet.h"
 #include "qpid/sys/Mutex.h"
 #include "qpid/sys/RefCounted.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include <memory>
 
 namespace qpid {
@@ -122,4 +122,4 @@ class SubscriptionImpl : public sys::RefCounted, public MessageListener {
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_SUBSCRIPTIONIMPL_H*/
+#endif  /*!QPID_CLIENT_SUBSCRIPTION_IMPL_H*/

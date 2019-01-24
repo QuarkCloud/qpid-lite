@@ -26,7 +26,7 @@
 
 namespace qpid {
 	namespace sys {
-		namespace client { struct ConnectionSettings; }
+		//namespace client { struct ConnectionSettings; }
 
 
 		/**

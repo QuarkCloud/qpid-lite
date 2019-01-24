@@ -24,6 +24,8 @@
 #include "qpid/sys/OutputControl.h"
 #include "qpid/sys/ConnectionCodec.h"
 #include "qpid/sys/AtomicValue.h"
+#include "qpid/sys/AsynchIO.h"
+#include "qpid/sys/Timer.h"
 #include "qpid/sys/Mutex.h"
 #include "qpid/sys/Compile.h"
 
@@ -31,19 +33,7 @@
 #include <string>
 
 namespace qpid {
-
-namespace framing {
-    class ProtocolInitiation;
-}
-
-
 namespace sys {
-
-class AsynchIO;
-struct AsynchIOBufferBase;
-class Socket;
-class Timer;
-class TimerTask;
 
 class AsynchIOHandler : public OutputControl {
     std::string identifier;
@@ -55,8 +45,6 @@ class AsynchIOHandler : public OutputControl {
     bool nodict;
     bool headerSent;
     boost::intrusive_ptr<sys::TimerTask> timeoutTimerTask;
-
-    void write(const framing::ProtocolInitiation&);
 
   public:
     QPID_SYS_EXTERN AsynchIOHandler(const std::string& id, qpid::sys::ConnectionCodec::Factory* f, bool isClient, bool nodict);

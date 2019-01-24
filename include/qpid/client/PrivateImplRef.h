@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_PRIVATEIMPL_H
-#define QPID_CLIENT_PRIVATEIMPL_H
+#ifndef QPID_CLIENT_PRIVATE_IMPL_H
+#define QPID_CLIENT_PRIVATE_IMPL_H 1
 
 /*
  *
@@ -22,7 +22,7 @@
  *
  */
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include <boost/intrusive_ptr.hpp>
 #include "qpid/sys/RefCounted.h"
 
@@ -91,4 +91,4 @@ template <class T> class PrivateImplRef {
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_PRIVATEIMPL_H*/
+#endif  /*!QPID_CLIENT_PRIVATE_IMPL_H*/

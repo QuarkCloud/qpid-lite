@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_SUBSCRIPTIONMANAGER_H
-#define QPID_CLIENT_SUBSCRIPTIONMANAGER_H
+#ifndef QPID_CLIENT_SUBSCRIPTION_MANAGER_H
+#define QPID_CLIENT_SUBSCRIPTION_MANAGER_H 1
 
 /*
  *
@@ -26,7 +26,7 @@
 #include "qpid/client/Subscription.h"
 #include "qpid/sys/Runnable.h"
 #include "qpid/sys/Thread.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/client/MessageListener.h"
 #include "qpid/client/LocalQueue.h"
 #include "qpid/client/Handle.h"
@@ -171,7 +171,7 @@ class QPID_CLIENT_CLASS_EXTERN SubscriptionManager : public sys::Runnable, publi
      *@param timeout wait up this timeout for a message to appear.
      *@return true if result was set, false if no message available after timeout.
      */
-    QPID_CLIENT_EXTERN bool get(Message& result, const std::string& queue, sys::Duration timeout=0);
+    QPID_CLIENT_EXTERN bool get(Message& result, const std::string& queue, sys::NanoDuration timeout=0);
 
     /** Get a single message from a queue.
      * (Note: this currently uses a subscription per invocation and is
@@ -181,7 +181,7 @@ class QPID_CLIENT_CLASS_EXTERN SubscriptionManager : public sys::Runnable, publi
      *@return message from the queue.
      *@throw Exception if the timeout is exceeded.
      */
-    QPID_CLIENT_EXTERN Message get(const std::string& queue, sys::Duration timeout=sys::TIME_INFINITE);
+    QPID_CLIENT_EXTERN Message get(const std::string& queue, sys::NanoDuration timeout=sys::TIME_INFINITE);
 
     /** Get a subscription by name.
      *@throw Exception if not found.
@@ -289,4 +289,4 @@ class AutoCancel {
 
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_SUBSCRIPTIONMANAGER_H*/
+#endif  /*!QPID_CLIENT_SUBSCRIPTION_MANAGER_H*/

@@ -18,8 +18,8 @@
  * under the License.
  *
  */
-#ifndef _StateManager_
-#define _StateManager_
+#ifndef QPID_CLIENT_STATE_MANAGE_H
+#define QPID_CLIENT_STATE_MANAGE_H 1
 
 #include <set>
 #include "qpid/sys/Monitor.h"
@@ -41,10 +41,10 @@ public:
     void waitForStateChange(int current);
     void waitFor(std::set<int> states);
     void waitFor(int state);
-    bool waitFor(std::set<int> states, qpid::sys::Duration);
-    bool waitFor(int state, qpid::sys::Duration);
+    bool waitFor(std::set<int> states, qpid::sys::NanoDuration);
+    bool waitFor(int state, qpid::sys::NanoDuration);
 };
 
 }}
 
-#endif
+#endif /**QPID_CLIENT_STATE_MANAGE_H*/

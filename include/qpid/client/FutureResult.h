@@ -1,3 +1,7 @@
+
+#ifndef QPID_CLIENT_FUTURE_RESULT_H
+#define QPID_CLIENT_FUTURE_RESULT_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,31 +23,28 @@
  *
  */
 
-#ifndef _FutureResult_
-#define _FutureResult_
+
 
 #include <string>
 
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/framing/amqp_framing.h"
 #include "qpid/client/FutureCompletion.h"
 
 namespace qpid {
-namespace client {
+	namespace client {
 
-class SessionImpl;
+		class SessionImpl;
 
-///@internal
-class QPID_CLIENT_CLASS_EXTERN FutureResult : public FutureCompletion
-{
-    std::string result;
-public:
-    QPID_CLIENT_EXTERN const std::string& getResult(SessionImpl& session) const;
-    void received(const std::string& result);
-};
+		///@internal
+		class QPID_CLIENT_CLASS_EXTERN FutureResult : public FutureCompletion
+		{
+			std::string result;
+		public:
+			QPID_CLIENT_EXTERN const std::string& getResult(SessionImpl& session) const;
+			void received(const std::string& result);
+		};
 
-}}
-
-
-
-#endif
+	}
+}
+#endif  /**QPID_CLIENT_FUTURE_RESULT_H*/

@@ -18,72 +18,12 @@
  * limitations under the License.
  *
  */
+#include "qpid/sys/MutexTemplate.h"
 
-namespace qpid {
-namespace sys {
-
-/**
- * Scoped lock template: calls lock() in ctor, unlock() in dtor.
- * L can be any class with lock() and unlock() functions.
- */
-template <class L>
-class ScopedLock
-{
-  public:
-    ScopedLock(L& l) : mutex(l) { mutex.lock(); }
-    ~ScopedLock() { mutex.unlock(); }
-  private:
-    L& mutex;
-};
-
-template <class L>
-class ScopedUnlock
-{
-  public:
-    ScopedUnlock(L& l) : mutex(l) { mutex.unlock(); }
-    ~ScopedUnlock() { mutex.lock(); }
-  private:
-    L& mutex;
-};
-
-template <class L>
-class ScopedRlock
-{
-  public:
-    ScopedRlock(L& l) : mutex(l) { mutex.rlock(); }
-    ~ScopedRlock() { mutex.unlock(); }
-  private:
-    L& mutex;
-};
-
-template <class L>
-class ScopedWlock
-{
-  public:
-    ScopedWlock(L& l) : mutex(l) { mutex.wlock(); }
-    ~ScopedWlock() { mutex.unlock(); }
-  private:
-    L& mutex;
-};
-
-template <class L>
-class ConditionalScopedLock
-{
-  public:
-    ConditionalScopedLock(L& l) : mutex(l) { acquired = mutex.trylock(); }
-    ~ConditionalScopedLock() { if (acquired) mutex.unlock(); }
-    bool lockAcquired() { return acquired; }
-  private:
-    L& mutex;
-    bool acquired;
-};
-
-}}
-
-#if defined (_WIN32)
-#include "windows/Mutex.h"
+#if defined (WIN32) || defined(_WINDOWS)
+#include "qpid/sys/windows/Mutex.h"
 #else
-#include "posix/Mutex.h"
+#include "qpid/sys/posix/Mutex.h"
 #endif
 
 #endif  /*!QPID_SYS_MUTEX_H*/

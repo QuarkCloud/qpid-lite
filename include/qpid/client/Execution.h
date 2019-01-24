@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_EXECUTION_H
+#define QPID_CLIENT_EXECUTION_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -18,8 +21,7 @@
  * under the License.
  *
  */
-#ifndef _Execution_
-#define _Execution_
+
 
 #include "qpid/framing/SequenceNumber.h"
 #include "qpid/client/Demux.h"
@@ -50,4 +52,4 @@ public:
 
 }}
 
-#endif
+#endif  /**QPID_CLIENT_EXECUTION_H*/

@@ -26,7 +26,7 @@ namespace qpid {
 		template <class T>
 		std::auto_ptr<T> make_auto_ptr(T* ptr) { return std::auto_ptr<T>(ptr); }
 	}
-} // namespace qpid
+} // namespace qpid::sys
 
 
 

@@ -104,7 +104,7 @@ public:
 	QPID_SYS_EXTERN void unregisterHandle(PollerHandle& handle);
 	QPID_SYS_EXTERN void monitorHandle(PollerHandle& handle, Direction dir);
 	QPID_SYS_EXTERN void unmonitorHandle(PollerHandle& handle, Direction dir);
-	QPID_SYS_EXTERN Event wait(Duration timeout = TIME_INFINITE);
+	QPID_SYS_EXTERN Event wait(NanoDuration timeout = TIME_INFINITE);
 
 	QPID_SYS_EXTERN bool hasShutdown();
 };

@@ -24,7 +24,7 @@
 #include <boost/shared_ptr.hpp>
 #include "qpid/sys/Compile.h"
 
-#ifdef _WIN32
+#if defined (WIN32) || defined(_WINDOWS)
 #  ifdef _MSC_VER
 #    define QPID_TSS __declspec(thread)
 #  else

@@ -27,7 +27,7 @@ namespace sys {
 class Semaphore
 {
 public:
-    Semaphore(uint c = 1) : count(c) {}
+    Semaphore(uint32_t c = 1) : count(c) {}
 
     void lock() { acquire(); }
     void unlock() { release(); }
@@ -51,7 +51,7 @@ public:
         count--;
     }
 
-    void release(uint n)
+    void release(uint32_t n)
     {
         Monitor::ScopedLock l(monitor);
         if (count==0) monitor.notifyAll();
@@ -71,7 +71,7 @@ public:
 
 private:
     Monitor monitor;
-    uint count;
+    uint32_t count;
 };
 
 }}

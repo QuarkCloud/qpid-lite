@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_MESSAGEIMPL_H
-#define QPID_CLIENT_MESSAGEIMPL_H
+#ifndef QPID_CLIENT_MESSAGE_IMPL_H
+#define QPID_CLIENT_MESSAGE_IMPL_H 1
 
 /*
  *
@@ -77,4 +77,4 @@ private:
 
 }}
 
-#endif  /*!QPID_CLIENT_MESSAGEIMPL_H*/
+#endif  /*!QPID_CLIENT_MESSAGE_IMPL_H*/

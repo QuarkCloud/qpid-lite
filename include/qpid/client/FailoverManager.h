@@ -1,5 +1,5 @@
-#ifndef QPID_CLIENT_FAILOVERMANAGER_H
-#define QPID_CLIENT_FAILOVERMANAGER_H
+#ifndef QPID_CLIENT_FAILOVER_MANAGER_H
+#define QPID_CLIENT_FAILOVER_MANAGER_H 1
 
 /*
  *
@@ -24,7 +24,7 @@
 
 #include "qpid/sys/Exception.h"
 #include "qpid/client/AsyncSession.h"
-#include "qpid/client/ClientImportExport.h"
+#include "qpid/client/Compile.h"
 #include "qpid/client/Connection.h"
 #include "qpid/client/ConnectionSettings.h"
 #include "qpid/client/FailoverListener.h"
@@ -135,4 +135,4 @@ class QPID_CLIENT_CLASS_EXTERN FailoverManager
 };
 }} // namespace qpid::client
 
-#endif  /*!QPID_CLIENT_FAILOVERMANAGER_H*/
+#endif  /*!QPID_CLIENT_FAILOVER_MANAGER_H*/

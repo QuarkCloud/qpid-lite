@@ -1,3 +1,6 @@
+#ifndef QPID_CLIENT_TYPED_RESULT_H
+#define QPID_CLIENT_TYPED_RESULT_H 1
+
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -19,47 +22,44 @@
  *
  */
 
-#ifndef _TypedResult_
-#define _TypedResult_
-
 #include "qpid/client/Completion.h"
 #include "qpid/framing/StructHelper.h"
 
 namespace qpid {
-namespace client {
+	namespace client {
 
-/**
- * Returned by asynchronous commands that return a result.
- * You can use get() to wait for completion and get the result value.
- * \ingroup clientapi
- */
-template <class T> class TypedResult : public Completion
-{
-    T result;
-    bool decoded;
+		/**
+		 * Returned by asynchronous commands that return a result.
+		 * You can use get() to wait for completion and get the result value.
+		 * \ingroup clientapi
+		 */
+		template <class T> class TypedResult : public Completion
+		{
+			T result;
+			bool decoded;
 
-public:
-    ///@internal
-    TypedResult(const Completion& c) : Completion(c), decoded(false) {}
+		public:
+			///@internal
+			TypedResult(const Completion& c) : Completion(c), decoded(false) {}
 
-    /**
-     * Wait for the asynchronous command that returned this TypedResult to complete
-     * and return its result.
-     *
-     *@return The result returned by the command.
-     *@exception If the command returns an error, get() throws an exception.
-     *
-     */
-    T& get() {
-        if (!decoded) {
-            framing::StructHelper helper;
-            helper.decode(result, getResult());
-            decoded = true;
-        }
-        return result;
-    }
-};
+			/**
+			 * Wait for the asynchronous command that returned this TypedResult to complete
+			 * and return its result.
+			 *
+			 *@return The result returned by the command.
+			 *@exception If the command returns an error, get() throws an exception.
+			 *
+			 */
+			T& get() {
+				if (!decoded) {
+					framing::StructHelper helper;
+					helper.decode(result, getResult());
+					decoded = true;
+				}
+				return result;
+			}
+		};
 
-}}
-
-#endif
+	}
+}
+#endif  /**QPID_CLIENT_TYPED_RESULT_H*/
