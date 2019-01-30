@@ -22,7 +22,7 @@
  *
  */
 #include "qpid/amqp/Address.h"
-#include "qpid/client/Session.h"
+#include "qpid/driver/Session.h"
 
 namespace qpid {
 	namespace amqp0_10 {
@@ -38,10 +38,10 @@ namespace qpid {
 		class AddressResolution
 		{
 		public:
-			std::auto_ptr<MessageSource> resolveSource(qpid::client::Session session,
+			std::auto_ptr<MessageSource> resolveSource(qpid::driver::Session session,
 				const qpid::amqp::Address& address);
 
-			std::auto_ptr<MessageSink> resolveSink(qpid::client::Session session,
+			std::auto_ptr<MessageSink> resolveSink(qpid::driver::Session session,
 				const qpid::amqp::Address& address);
 
 			static qpid::amqp::Address convert(const qpid::framing::ReplyTo&);

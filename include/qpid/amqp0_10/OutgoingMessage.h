@@ -22,9 +22,9 @@
  *
  */
 #include "qpid/amqp/Message.h"
-#include "qpid/client/AsyncSession.h"
-#include "qpid/client/Completion.h"
-#include "qpid/client/Message.h"
+#include "qpid/driver/AsyncSession.h"
+#include "qpid/driver/Completion.h"
+#include "qpid/driver/Message.h"
 #include "qpid/sys/Time.h"
 
 namespace qpid {
@@ -33,8 +33,8 @@ namespace qpid {
 		class OutgoingMessage
 		{
 		private:
-			qpid::client::Message message;
-			qpid::client::Completion status;
+			qpid::driver::Message message;
+			qpid::driver::Completion status;
 			std::string subject;
 			qpid::sys::AbsTime base;
 			bool expired;
@@ -44,8 +44,8 @@ namespace qpid {
 			void convert(const qpid::amqp::Message&);
 			void setSubject(const std::string& subject);
 			std::string getSubject() const;
-			void send(qpid::client::AsyncSession& session, const std::string& destination, const std::string& routingKey);
-			void send(qpid::client::AsyncSession& session, const std::string& routingKey);
+			void send(qpid::driver::AsyncSession& session, const std::string& destination, const std::string& routingKey);
+			void send(qpid::driver::AsyncSession& session, const std::string& routingKey);
 			bool isComplete();
 			void markRedelivered();
 		};

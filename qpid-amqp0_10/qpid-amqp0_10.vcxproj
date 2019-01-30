@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="AcceptTracker.cpp" />
     <ClCompile Include="AddressResolution.cpp" />
+    <ClCompile Include="EngineInit.cpp" />
     <ClCompile Include="Codecs.cpp" />
     <ClCompile Include="Connection.cpp" />
     <ClCompile Include="ConnectionImpl.cpp" />
@@ -34,6 +35,7 @@
   <ItemGroup>
     <ClInclude Include="..\include\qpid\amqp0_10\AcceptTracker.h" />
     <ClInclude Include="..\include\qpid\amqp0_10\AddressResolution.h" />
+    <ClInclude Include="..\include\qpid\amqp0_10\EngineInit.h" />
     <ClInclude Include="..\include\qpid\amqp0_10\Codecs.h" />
     <ClInclude Include="..\include\qpid\amqp0_10\CodecsInternal.h" />
     <ClInclude Include="..\include\qpid\amqp0_10\Compile.h" />
@@ -131,7 +133,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qpid-sysd.lib;qpid-framingd.lib;qpid-typesd.lib;qpid-clientd.lib;qpid-amqpd.lib</AdditionalDependencies>
+      <AdditionalDependencies>qpid-sysd.lib;qpid-framingd.lib;qpid-typesd.lib;qpid-driverd.lib;qpid-amqpd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -150,7 +152,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qpid-sysd.lib;qpid-framingd.lib;qpid-typesd.lib;qpid-clientd.lib;qpid-amqpd.lib</AdditionalDependencies>
+      <AdditionalDependencies>qpid-sysd.lib;qpid-framingd.lib;qpid-typesd.lib;qpid-driverd.lib;qpid-amqpd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -172,7 +174,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qpid-sys.lib;qpid-framing.lib;qpid-types.lib;qpid-client.lib;qpid-amqp.lib</AdditionalDependencies>
+      <AdditionalDependencies>qpid-sys.lib;qpid-framing.lib;qpid-types.lib;qpid-driver.lib;qpid-amqp.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -195,7 +197,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qpid-sys.lib;qpid-framing.lib;qpid-types.lib;qpid-client.lib;qpid-amqp.lib</AdditionalDependencies>
+      <AdditionalDependencies>qpid-sys.lib;qpid-framing.lib;qpid-types.lib;qpid-driver.lib;qpid-amqp.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -24,10 +24,10 @@
 #include "qpid/amqp/Address.h"
 #include "qpid/amqp/Message.h"
 #include "qpid/amqp/MessageImpl.h"
-
+#include "qpid/framing/enum.h"
 #include "qpid/types/encodings.h"
 #include "qpid/types/Variant.h"
-#include "qpid/framing/enum.h"
+
 
 #include "qpid/sys/Statement.h"
 #include "qpid/sys/Time.h"
@@ -130,11 +130,16 @@ namespace qpid {
 			return subject;
 		}
 
-		void OutgoingMessage::send(qpid::client::AsyncSession& session, const std::string& destination, const std::string& routingKey)
+		void OutgoingMessage::send(qpid::driver::AsyncSession& session, const std::string& destination, const std::string& routingKey)
 		{
 			if (!expired) {
-				message.getDeliveryProperties().setRoutingKey(routingKey);
-				status = session.messageTransfer(client::arg::destination = destination, client::arg::content = message);
+				message.getDeliveryProperties().setRoutingKey(routingKey);				
+				status = session.messageTransfer(
+					destination, 
+					1 ,
+					0 ,
+					message,
+					false);
 				if (destination.empty()) {
 					QPID_LOG(debug, "Sending to queue " << routingKey << " " << message.getMessageProperties() << " " << message.getDeliveryProperties());
 				}
@@ -143,7 +148,7 @@ namespace qpid {
 				}
 			}
 		}
-		void OutgoingMessage::send(qpid::client::AsyncSession& session, const std::string& routingKey)
+		void OutgoingMessage::send(qpid::driver::AsyncSession& session, const std::string& routingKey)
 		{
 			send(session, std::string(), routingKey);
 		}

@@ -25,6 +25,11 @@
 #include "qpid/amqp/Session.h"
 #include "qpid/amqp/PrivateImplRef.h"
 
+#include "qpid/amqp/DriverImpl.h"
+#include "qpid/amqp/ProtocolRegistry.h"
+
+#include "qpid/driver/ConnectionImpl.h"
+
 #include "qpid/framing/Uuid.h"
 
 #include "qpid/sys/Statement.h"
@@ -215,7 +220,7 @@ namespace qpid {
 			else if (name == "x-reconnect-on-limit-exceeded" || name == "x_reconnect_on_limit_exceeded") {
 				reconnectOnLimitExceeded = value;
 			}
-			else if (name == "client-properties" || name == "client_properties") {
+			else if (name == "driver-properties" || name == "client_properties") {
 				amqp0_10::translate(value.asMap(), settings.clientProperties);
 			}
 			else if (name == "disable-auto-decode" || name == "disable_auto_decode") {

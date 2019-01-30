@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\qpid\amqp1_0\AddressHelper.h" />
+    <ClInclude Include="..\include\qpid\amqp1_0\EngineInit.h" />
     <ClInclude Include="..\include\qpid\amqp1_0\Compile.h" />
     <ClInclude Include="..\include\qpid\amqp1_0\ConnectionContext.h" />
     <ClInclude Include="..\include\qpid\amqp1_0\ConnectionImpl.h" />
@@ -41,6 +42,7 @@
     <ClCompile Include="AddressHelper.cpp" />
     <ClCompile Include="ConnectionContext.cpp" />
     <ClCompile Include="ConnectionImpl.cpp" />
+    <ClCompile Include="EngineInit.cpp" />
     <ClCompile Include="PnData.cpp" />
     <ClCompile Include="ReceiverContext.cpp" />
     <ClCompile Include="ReceiverImpl.cpp" />

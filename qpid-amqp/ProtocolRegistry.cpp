@@ -63,19 +63,11 @@ namespace qpid {
 			typedef std::map<std::string, ProtocolRegistry::Factory*> Factories;
 			typedef std::vector<ProtocolRegistry::Shutdown*> Shutdowns;
 
-			ConnectionImpl* create_0_10(const std::string& url, const qpid::types::Variant::Map& options)
-			{
-				//return new qpid::amqp::ConnectionImpl(url, options);
-				return NULL;
-			}
-
 			class Registry
 			{
 			public:
 				Registry()
 				{
-					factories["amqp0-10"] = &create_0_10;
-					//shutdowns.push_back(&qpid::client::shutdown);
 					sys::CommonOptions common("", "", QPIDC_CONF_FILE);
 					ProtocolOptions options;
 					try {

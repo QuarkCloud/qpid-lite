@@ -48,6 +48,9 @@
     <ClCompile Include="Connection.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="EngineInit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\qpid\amqp0_10\AcceptTracker.h">
@@ -93,6 +96,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\qpid\amqp0_10\Compile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\amqp0_10\EngineInit.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

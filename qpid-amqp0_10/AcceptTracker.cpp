@@ -75,14 +75,14 @@ namespace qpid {
 			const size_t FLUSH_FREQUENCY = 1024;
 		}
 
-		void AcceptTracker::addToPending(qpid::client::AsyncSession& session, const Record& record)
+		void AcceptTracker::addToPending(qpid::driver::AsyncSession& session, const Record& record)
 		{
 			pending.push_back(record);
 			if (pending.size() % FLUSH_FREQUENCY == 0) session.flush();
 		}
 
 
-		void AcceptTracker::accept(qpid::client::AsyncSession& session)
+		void AcceptTracker::accept(qpid::driver::AsyncSession& session)
 		{
 			for (StateMap::iterator i = destinationState.begin(); i != destinationState.end(); ++i) {
 				i->second.accept();
@@ -94,7 +94,7 @@ namespace qpid {
 			aggregateState.accept();
 		}
 
-		void AcceptTracker::accept(qpid::framing::SequenceNumber id, qpid::client::AsyncSession& session, bool cumulative)
+		void AcceptTracker::accept(qpid::framing::SequenceNumber id, qpid::driver::AsyncSession& session, bool cumulative)
 		{
 			for (StateMap::iterator i = destinationState.begin(); i != destinationState.end(); ++i) {
 				i->second.accept(id, cumulative);
@@ -105,7 +105,7 @@ namespace qpid {
 			addToPending(session, record);
 		}
 
-		void AcceptTracker::release(qpid::client::AsyncSession& session)
+		void AcceptTracker::release(qpid::driver::AsyncSession& session)
 		{
 			session.messageRelease(aggregateState.unaccepted);
 			for (StateMap::iterator i = destinationState.begin(); i != destinationState.end(); ++i) {

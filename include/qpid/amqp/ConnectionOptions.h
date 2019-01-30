@@ -144,8 +144,12 @@ namespace qpid {
 			 */
 			bool sslIgnoreHostnameVerificationFailure;
 
+			QPID_AMQP_EXTERN ConnectionOptions();
 			QPID_AMQP_EXTERN ConnectionOptions(const std::map<std::string, qpid::types::Variant>&);
+
 			QPID_AMQP_EXTERN void set(const std::string& name, const qpid::types::Variant& value);
+		private:
+			void InternalInit();
 		};
 	}
 }// namespace qpid::amqp

@@ -21,10 +21,10 @@
  * under the License.
  *
  */
+#include "qpid/driver/Connection.h"
+#include "qpid/amqp/ConnectionOptions.h"
 #include "qpid/amqp/ConnectionImpl.h"
 #include "qpid/types/Variant.h"
-#include "qpid/client/Connection.h"
-#include "qpid/client/ConnectionSettings.h"
 #include "qpid/sys/Mutex.h"
 #include "qpid/sys/Semaphore.h"
 #include "qpid/sys/Url.h"
@@ -62,10 +62,10 @@ namespace qpid {
 			mutable qpid::sys::Mutex lock;//used to protect data structures
 			qpid::sys::Semaphore semaphore;//used to coordinate reconnection
 			Sessions sessions;
-			qpid::client::Connection connection;
+			qpid::driver::Connection connection;
 			bool replaceUrls;     // Replace rather than merging with reconnect-urls
 			std::vector<std::string> urls;
-			qpid::client::ConnectionSettings settings;
+			qpid::amqp::ConnectionOptions settings;
 			bool autoReconnect;
 			double timeout;
 			int32_t limit;

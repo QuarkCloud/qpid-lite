@@ -24,7 +24,7 @@
 
 #include "qpid/amqp0_10/AcceptTracker.h"
 #include "qpid/amqp/Message.h"
-#include "qpid/client/AsyncSession.h"
+#include "qpid/driver/AsyncSession.h"
 #include "qpid/framing/SequenceSet.h"
 #include "qpid/framing/FrameSet.h"
 #include "qpid/sys/BlockingQueue.h"
@@ -65,7 +65,7 @@ namespace qpid {
 			};
 
 			IncomingMessages();
-			void setSession(qpid::client::AsyncSession session);
+			void setSession(qpid::driver::AsyncSession session);
 			bool get(Handler& handler, qpid::sys::NanoDuration timeout);
 			void wakeup();
 			bool getNextDestination(std::string& destination, qpid::sys::NanoDuration timeout);
@@ -84,7 +84,7 @@ namespace qpid {
 			enum ProcessState { EMPTY = 0, OK = 1, CLOSED = 2 };
 
 			sys::Monitor lock;
-			qpid::client::AsyncSession session;
+			qpid::driver::AsyncSession session;
 			boost::shared_ptr< sys::BlockingQueue<FrameSetPtr> > incoming;
 			bool inUse;
 			FrameSetQueue received;

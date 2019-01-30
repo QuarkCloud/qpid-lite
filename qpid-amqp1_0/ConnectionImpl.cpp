@@ -31,34 +31,6 @@
 
 namespace qpid {
 	namespace amqp1_0 {
-		// Static constructor which registers this implementation in the ProtocolRegistry
-		namespace {
-			amqp::ConnectionImpl* create(const std::string& u, const qpid::types::Variant::Map& o)
-			{
-				try {
-					return new ConnectionImpl(u, o);
-				}
-				catch (const types::Exception&) {
-					throw;
-				}
-				catch (const qpid::sys::Exception& e) {
-					throw amqp::ConnectionError(e.what());
-				}
-			}
-
-			void shutdown() {
-				amqp::DriverImpl::getDefault()->stop();
-			}
-
-			struct StaticInit
-			{
-				StaticInit()
-				{
-					amqp::ProtocolRegistry::add("amqp1.0", &create, &shutdown);
-				};
-			} init;
-		}
-
 		ConnectionImpl::ConnectionImpl(const std::string& url, const qpid::types::Variant::Map& options) :
 			connection(new ConnectionContext(url, options)) 
 		{

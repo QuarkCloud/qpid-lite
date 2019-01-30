@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\qpid\driver\AsyncSession.h" />
+    <ClInclude Include="..\include\qpid\driver\AsyncSession0_10.h" />
+    <ClInclude Include="..\include\qpid\driver\Bounds.h" />
+    <ClInclude Include="..\include\qpid\driver\ChainableFrameHandler.h" />
+    <ClInclude Include="..\include\qpid\driver\Compile.h" />
+    <ClInclude Include="..\include\qpid\driver\Completion.h" />
+    <ClInclude Include="..\include\qpid\driver\CompletionImpl.h" />
+    <ClInclude Include="..\include\qpid\driver\Connection.h" />
+    <ClInclude Include="..\include\qpid\driver\ConnectionAccess.h" />
+    <ClInclude Include="..\include\qpid\driver\ConnectionHandler.h" />
+    <ClInclude Include="..\include\qpid\driver\ConnectionImpl.h" />
+    <ClInclude Include="..\include\qpid\driver\Connector.h" />
+    <ClInclude Include="..\include\qpid\driver\Demux.h" />
+    <ClInclude Include="..\include\qpid\driver\Dispatcher.h" />
+    <ClInclude Include="..\include\qpid\driver\Execution.h" />
+    <ClInclude Include="..\include\qpid\driver\FlowControl.h" />
+    <ClInclude Include="..\include\qpid\driver\Future.h" />
+    <ClInclude Include="..\include\qpid\driver\FutureCompletion.h" />
+    <ClInclude Include="..\include\qpid\driver\FutureResult.h" />
+    <ClInclude Include="..\include\qpid\driver\Handle.h" />
+    <ClInclude Include="..\include\qpid\driver\LoadPlugins.h" />
+    <ClInclude Include="..\include\qpid\driver\LocalQueue.h" />
+    <ClInclude Include="..\include\qpid\driver\LocalQueueImpl.h" />
+    <ClInclude Include="..\include\qpid\driver\Message.h" />
+    <ClInclude Include="..\include\qpid\driver\MessageImpl.h" />
+    <ClInclude Include="..\include\qpid\driver\MessageListener.h" />
+    <ClInclude Include="..\include\qpid\driver\PrivateImplRef.h" />
+    <ClInclude Include="..\include\qpid\driver\Results.h" />
+    <ClInclude Include="..\include\qpid\driver\Session.h" />
+    <ClInclude Include="..\include\qpid\driver\Session0_10.h" />
+    <ClInclude Include="..\include\qpid\driver\SessionBase0_10.h" />
+    <ClInclude Include="..\include\qpid\driver\SessionBase0_10Access.h" />
+    <ClInclude Include="..\include\qpid\driver\SessionId.h" />
+    <ClInclude Include="..\include\qpid\driver\SessionImpl.h" />
+    <ClInclude Include="..\include\qpid\driver\SessionState.h" />
+    <ClInclude Include="..\include\qpid\driver\StateManager.h" />
+    <ClInclude Include="..\include\qpid\driver\Subscription.h" />
+    <ClInclude Include="..\include\qpid\driver\SubscriptionImpl.h" />
+    <ClInclude Include="..\include\qpid\driver\SubscriptionManager.h" />
+    <ClInclude Include="..\include\qpid\driver\SubscriptionManagerImpl.h" />
+    <ClInclude Include="..\include\qpid\driver\SubscriptionSettings.h" />
+    <ClInclude Include="..\include\qpid\driver\TypedResult.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AsyncSession_0_10.cpp" />
+    <ClCompile Include="Bounds.cpp" />
+    <ClCompile Include="Completion.cpp" />
+    <ClCompile Include="CompletionImpl.cpp" />
+    <ClCompile Include="Connection.cpp" />
+    <ClCompile Include="ConnectionHandler.cpp" />
+    <ClCompile Include="ConnectionImpl.cpp" />
+    <ClCompile Include="Connector.cpp" />
+    <ClCompile Include="Demux.cpp" />
+    <ClCompile Include="Dispatcher.cpp" />
+    <ClCompile Include="Future.cpp" />
+    <ClCompile Include="FutureCompletion.cpp" />
+    <ClCompile Include="FutureResult.cpp" />
+    <ClCompile Include="LocalQueue.cpp" />
+    <ClCompile Include="LocalQueueImpl.cpp" />
+    <ClCompile Include="Message.cpp" />
+    <ClCompile Include="MessageImpl.cpp" />
+    <ClCompile Include="MessageListener.cpp" />
+    <ClCompile Include="Results.cpp" />
+    <ClCompile Include="SessionBase0_10.cpp" />
+    <ClCompile Include="SessionId.cpp" />
+    <ClCompile Include="SessionImpl.cpp" />
+    <ClCompile Include="SessionState.cpp" />
+    <ClCompile Include="Session_0_10.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="Subscription.cpp" />
+    <ClCompile Include="SubscriptionImpl.cpp" />
+    <ClCompile Include="SubscriptionManager.cpp" />
+    <ClCompile Include="SubscriptionManagerImpl.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{18A5CE58-B36D-49A0-B375-F764E24CED95}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>qpid-driver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)win32\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)win32\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DRIVER_EXPORT;_WINDOWS;_USRDLL;qpiddriver_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpid-sysd.lib;qpid-typesd.lib;qpid-framingd.lib;qpid-amqpd.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;DRIVER_EXPORT;_WINDOWS;_USRDLL;qpiddriver_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpid-sysd.lib;qpid-typesd.lib;qpid-framingd.lib;qpid-amqpd.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DRIVER_EXPORT;qpiddriver_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpid-sys.lib;qpid-types.lib;qpid-framing.lib;qpid-amqp.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;DRIVER_EXPORT;qpiddriver_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0502;BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile />
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(ProjectDir)..\include;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;$(OutDir);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qpid-sys.lib;qpid-types.lib;qpid-framing.lib;qpid-amqp.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
