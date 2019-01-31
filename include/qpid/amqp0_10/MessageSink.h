@@ -22,7 +22,7 @@
  *
  */
 #include <string>
-#include "qpid/driver/AsyncSession.h"
+#include "qpid/client/AsyncSession.h"
 #include "qpid/amqp/Message.h"
 #include "qpid/amqp0_10/OutgoingMessage.h"
 
@@ -36,9 +36,9 @@ namespace qpid {
 		{
 		public:
 			virtual ~MessageSink() {}
-			virtual void declare(qpid::driver::AsyncSession& session, const std::string& name) = 0;
-			virtual void send(qpid::driver::AsyncSession& session, const std::string& name, OutgoingMessage& message) = 0;
-			virtual void cancel(qpid::driver::AsyncSession& session, const std::string& name) = 0;
+			virtual void declare(qpid::client::AsyncSession& session, const std::string& name) = 0;
+			virtual void send(qpid::client::AsyncSession& session, const std::string& name, OutgoingMessage& message) = 0;
+			virtual void cancel(qpid::client::AsyncSession& session, const std::string& name) = 0;
 		private:
 		};
 	}

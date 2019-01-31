@@ -79,7 +79,7 @@ namespace qpid {
 			return f.pending;
 		}
 
-		void SenderImpl::init(qpid::driver::AsyncSession s, AddressResolution& resolver)
+		void SenderImpl::init(qpid::client::AsyncSession s, AddressResolution& resolver)
 		{
 			sys::Mutex::ScopedLock l(lock);
 			session = s;

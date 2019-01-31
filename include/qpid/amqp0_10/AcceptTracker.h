@@ -21,8 +21,8 @@
  * under the License.
  *
  */
-#include "qpid/driver/AsyncSession.h"
-#include "qpid/driver/Completion.h"
+#include "qpid/client/AsyncSession.h"
+#include "qpid/client/Completion.h"
 #include "qpid/framing/SequenceNumber.h"
 #include "qpid/framing/SequenceSet.h"
 #include <deque>
@@ -40,9 +40,9 @@ namespace qpid {
 		{
 		public:
 			void delivered(const std::string& destination, const qpid::framing::SequenceNumber& id);
-			void accept(qpid::driver::AsyncSession&);
-			void accept(qpid::framing::SequenceNumber, qpid::driver::AsyncSession&, bool cumulative);
-			void release(qpid::driver::AsyncSession&);
+			void accept(qpid::client::AsyncSession&);
+			void accept(qpid::framing::SequenceNumber, qpid::client::AsyncSession&, bool cumulative);
+			void release(qpid::client::AsyncSession&);
 			uint32_t acceptsPending();
 			uint32_t acceptsPending(const std::string& destination);
 			void reset();
@@ -69,7 +69,7 @@ namespace qpid {
 			typedef std::map<std::string, State> StateMap;
 			struct Record
 			{
-				qpid::driver::Completion status;
+				qpid::client::Completion status;
 				qpid::framing::SequenceSet accepted;
 			};
 			typedef std::deque<Record> Records;
@@ -78,7 +78,7 @@ namespace qpid {
 			StateMap destinationState;
 			Records pending;
 
-			void addToPending(qpid::driver::AsyncSession&, const Record&);
+			void addToPending(qpid::client::AsyncSession&, const Record&);
 			void checkPending();
 			void completed(qpid::framing::SequenceSet&);
 		};

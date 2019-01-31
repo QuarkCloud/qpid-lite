@@ -20,7 +20,7 @@
 
 
 #include "qpid/amqp0_10/SessionHandler.h"
-#include "qpid/driver/SessionState.h"
+#include "qpid/client/SessionState.h"
 #include "qpid/framing/reply_exceptions.h"
 #include "qpid/framing/AllInvoker.h"
 #include "qpid/framing/enum.h"
@@ -220,7 +220,7 @@ namespace qpid {
 
 		void SessionHandler::commandPoint(const SequenceNumber& id, uint64_t offset) {
 			checkAttached();
-			getState()->receiverSetCommandPoint(driver::SessionPoint(id, offset));
+			getState()->receiverSetCommandPoint(client::SessionPoint(id, offset));
 			if (!receiveReady) {
 				receiveReady = true;
 				readyToReceive();
@@ -231,11 +231,11 @@ namespace qpid {
 			checkAttached();
 			if (getState()->hasState()) { // Replay
 				if (commands.empty()) throw IllegalStateException(
-					QPID_MSG(getState()->getId() << ": has state but driver is attaching as new session."));
+					QPID_MSG(getState()->getId() << ": has state but client is attaching as new session."));
 				// TODO aconway 2008-05-12: support replay of partial commands.
 				// Here we always round down to the last command boundary.
-				driver::SessionPoint expectedPoint = commands.empty() ? SequenceNumber(0) : driver::SessionPoint(commands.front(), 0);
-				driver::SessionState::ReplayRange replay = getState()->senderExpected(expectedPoint);
+				client::SessionPoint expectedPoint = commands.empty() ? SequenceNumber(0) : client::SessionPoint(commands.front(), 0);
+				client::SessionState::ReplayRange replay = getState()->senderExpected(expectedPoint);
 				sendCommandPoint(expectedPoint);
 				std::for_each(replay.begin(), replay.end(), out); // replay
 			}
@@ -310,7 +310,7 @@ namespace qpid {
 				sendCommandPoint(getState()->senderGetCommandPoint());
 		}
 
-		void SessionHandler::sendCommandPoint(const driver::SessionPoint& point) {
+		void SessionHandler::sendCommandPoint(const client::SessionPoint& point) {
 			peer.commandPoint(point.command, point.offset);
 			if (!sendReady) {
 				sendReady = true;

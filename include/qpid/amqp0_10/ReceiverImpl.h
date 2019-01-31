@@ -24,7 +24,7 @@
 #include "qpid/amqp/Address.h"
 #include "qpid/amqp/Message.h"
 #include "qpid/amqp/ReceiverImpl.h"
-#include "qpid/driver/AsyncSession.h"
+#include "qpid/client/AsyncSession.h"
 #include "qpid/amqp0_10/SessionImpl.h"
 #include "qpid/sys/Time.h"
 #include "qpid/sys/Mutex.h"
@@ -49,7 +49,7 @@ namespace qpid {
 			ReceiverImpl(SessionImpl& parent, const std::string& name,
 				const qpid::amqp::Address& address, bool autoDecode);
 
-			void init(qpid::driver::AsyncSession session, AddressResolution& resolver);
+			void init(qpid::client::AsyncSession session, AddressResolution& resolver);
 			bool get(qpid::amqp::Message& message, qpid::sys::MilliDuration timeout);
 			qpid::amqp::Message get(qpid::sys::MilliDuration timeout);
 			bool fetch(qpid::amqp::Message& message, qpid::sys::MilliDuration timeout);
@@ -78,7 +78,7 @@ namespace qpid {
 
 			std::auto_ptr<MessageSource> source;
 			uint32_t capacity;
-			qpid::driver::AsyncSession session;
+			qpid::client::AsyncSession session;
 			uint32_t window;
 
 			void startFlow(const sys::Mutex::ScopedLock&); // Dummy param, call with lock held

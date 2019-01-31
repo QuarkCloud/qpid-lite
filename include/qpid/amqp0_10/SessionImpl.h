@@ -28,8 +28,8 @@
 #include "qpid/amqp/Session.h"
 #include "qpid/amqp/exceptions.h"
 
-#include "qpid/driver/Session.h"
-#include "qpid/driver/SubscriptionManager.h"
+#include "qpid/client/Session.h"
+#include "qpid/client/SubscriptionManager.h"
 #include "qpid/framing/reply_exceptions.h"
 #include "qpid/sys/ExceptionHolder.h"
 #include "qpid/sys/Time.h"
@@ -85,7 +85,7 @@ namespace qpid {
 			uint32_t getUnsettledAcks();
 			uint32_t getUnsettledAcks(const std::string& destination);
 
-			void setSession(qpid::driver::Session);
+			void setSession(qpid::client::Session);
 
 			template <class T> bool execute(T& f)
 			{
@@ -132,7 +132,7 @@ namespace qpid {
 
 			mutable qpid::sys::Mutex lock;
 			boost::intrusive_ptr<ConnectionImpl> connection;
-			qpid::driver::Session session;
+			qpid::client::Session session;
 			AddressResolution resolver;
 			IncomingMessages incoming;
 			Receivers receivers;

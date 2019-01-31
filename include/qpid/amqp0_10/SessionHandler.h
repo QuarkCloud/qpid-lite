@@ -22,7 +22,7 @@
  *
  */
 #include "qpid/amqp0_10/Compile.h"
-#include "qpid/driver/SessionState.h"
+#include "qpid/client/SessionState.h"
 #include "qpid/framing/ChannelHandler.h"
 #include "qpid/framing/FrameHandler.h"
 #include "qpid/framing/AMQP_AllProxy.h"
@@ -33,7 +33,7 @@ namespace qpid {
 	namespace amqp0_10 {
 
 		/**
-		 * Base SessionHandler with logic common to both driver and broker.
+		 * Base SessionHandler with logic common to both client and broker.
 		 *
 		 * A SessionHandler is associated with a channel and can be attached
 		 * to a session state.
@@ -51,7 +51,7 @@ namespace qpid {
 
 			void setOutHandler(framing::FrameHandler& h) { channel.next = &h; }
 
-			virtual driver::SessionState* getState() = 0;
+			virtual client::SessionState* getState() = 0;
 			virtual framing::FrameHandler* getInHandler() = 0;
 
 			// Non-protocol methods, called locally to initiate some action.
@@ -104,7 +104,7 @@ namespace qpid {
 
 		private:
 			void checkAttached();
-			void sendCommandPoint(const driver::SessionPoint&);
+			void sendCommandPoint(const client::SessionPoint&);
 
 			framing::AMQP_AllProxy::Session  peer;
 			std::string name;

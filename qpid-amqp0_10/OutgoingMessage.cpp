@@ -130,7 +130,7 @@ namespace qpid {
 			return subject;
 		}
 
-		void OutgoingMessage::send(qpid::driver::AsyncSession& session, const std::string& destination, const std::string& routingKey)
+		void OutgoingMessage::send(qpid::client::AsyncSession& session, const std::string& destination, const std::string& routingKey)
 		{
 			if (!expired) {
 				message.getDeliveryProperties().setRoutingKey(routingKey);				
@@ -148,7 +148,7 @@ namespace qpid {
 				}
 			}
 		}
-		void OutgoingMessage::send(qpid::driver::AsyncSession& session, const std::string& routingKey)
+		void OutgoingMessage::send(qpid::client::AsyncSession& session, const std::string& routingKey)
 		{
 			send(session, std::string(), routingKey);
 		}

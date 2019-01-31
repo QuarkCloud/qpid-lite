@@ -112,7 +112,7 @@ namespace qpid {
 			}
 		}
 
-		void ReceiverImpl::init(qpid::driver::AsyncSession s, AddressResolution& resolver)
+		void ReceiverImpl::init(qpid::client::AsyncSession s, AddressResolution& resolver)
 		{
 			sys::Mutex::ScopedLock l(lock);
 			session = s;
@@ -210,7 +210,7 @@ namespace qpid {
 				return true;
 			}
 			else {
-				qpid::driver::Session s;
+				qpid::client::Session s;
 				{
 					sys::Mutex::ScopedLock l(lock);
 					if (state == CANCELLED) return false; // Might have been closed during get.

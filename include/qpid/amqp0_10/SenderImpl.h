@@ -24,7 +24,7 @@
 #include "qpid/amqp/Address.h"
 #include "qpid/amqp/Message.h"
 #include "qpid/amqp/SenderImpl.h"
-#include "qpid/driver/AsyncSession.h"
+#include "qpid/client/AsyncSession.h"
 #include "qpid/amqp0_10/SessionImpl.h"
 #include <memory>
 #include <boost/intrusive_ptr.hpp>
@@ -52,7 +52,7 @@ namespace qpid {
 			void setCapacity(uint32_t);
 			uint32_t getCapacity();
 			uint32_t getUnsettled();
-			void init(qpid::driver::AsyncSession, AddressResolution&);
+			void init(qpid::client::AsyncSession, AddressResolution&);
 			const std::string& getName() const;
 			qpid::amqp::Session getSession() const;
 			qpid::amqp::Address getAddress() const;
@@ -66,7 +66,7 @@ namespace qpid {
 			State state;
 			std::auto_ptr<MessageSink> sink;
 
-			qpid::driver::AsyncSession session;
+			qpid::client::AsyncSession session;
 			std::string destination;
 			std::string routingKey;
 
@@ -123,7 +123,7 @@ namespace qpid {
 				{
 					//TODO: ideally want to put messages on the outbound
 					//queue and pull them off in io thread, but the old
-					//0-10 driver doesn't support that option so for now
+					//0-10 client doesn't support that option so for now
 					//we simply don't queue unreliable messages
 					impl.sendUnreliable(message);
 				}

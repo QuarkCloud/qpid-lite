@@ -34,8 +34,8 @@
 #include "qpid/amqp/Receiver.h"
 #include "qpid/amqp/Session.h"
 
-#include "qpid/driver/SessionBase0_10Access.h"
-#include "qpid/driver/SessionImpl.h"
+#include "qpid/client/SessionBase0_10Access.h"
+#include "qpid/client/SessionImpl.h"
 
 #include "qpid/framing/enum.h"
 #include "qpid/framing/reply_exceptions.h"
@@ -76,7 +76,7 @@ namespace qpid {
 		{
 			ScopedLock l(lock);
 			txError.raise();
-			qpid::driver::SessionBase0_10Access s(session);
+			qpid::client::SessionBase0_10Access s(session);
 			try {
 				s.get()->assertOpen();
 			}
@@ -109,7 +109,7 @@ namespace qpid {
 		bool SessionImpl::hasError()
 		{
 			ScopedLock l(lock);
-			qpid::driver::SessionBase0_10Access s(session);
+			qpid::client::SessionBase0_10Access s(session);
 			return s.get()->hasError();
 		}
 
@@ -230,7 +230,7 @@ namespace qpid {
 			key = name;
 		}
 
-		void SessionImpl::setSession(qpid::driver::Session s)
+		void SessionImpl::setSession(qpid::client::Session s)
 		{
 			session = s;
 			incoming.setSession(session);
@@ -326,7 +326,7 @@ namespace qpid {
 		{
 			boost::intrusive_ptr<SessionImpl> impl = getImplPtr<qpid::amqp::Session, SessionImpl>(s);
 			if (!impl) {
-				throw SessionError(QPID_MSG("Configuration error; require qpid::driver::amqp0_10::SessionImpl"));
+				throw SessionError(QPID_MSG("Configuration error; require qpid::client::amqp0_10::SessionImpl"));
 			}
 			return *impl;
 		}

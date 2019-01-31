@@ -22,7 +22,7 @@
  *
  */
 #include <string>
-#include "qpid/driver/AsyncSession.h"
+#include "qpid/client/AsyncSession.h"
 
 namespace qpid {
 	namespace amqp0_10 {
@@ -36,8 +36,8 @@ namespace qpid {
 		{
 		public:
 			virtual ~MessageSource() {}
-			virtual void subscribe(qpid::driver::AsyncSession& session, const std::string& destination) = 0;
-			virtual void cancel(qpid::driver::AsyncSession& session, const std::string& destination) = 0;
+			virtual void subscribe(qpid::client::AsyncSession& session, const std::string& destination) = 0;
+			virtual void cancel(qpid::client::AsyncSession& session, const std::string& destination) = 0;
 
 		private:
 		};

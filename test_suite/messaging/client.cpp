@@ -52,10 +52,10 @@ int main(int argc, char** argv) {
         connection.open();
         Session session = connection.createSession();
 
-        Sender sender = session.createSender("service_queue_0;{create: always}");
+        Sender sender = session.createSender("service_queue;{create: always}");
 
         //create temp queue & receiver...
-        Receiver receiver = session.createReceiver("#");
+        Receiver receiver = session.createReceiver("reply_queue;{create: always}");
         Address responseQueue = receiver.getAddress();
 
 	// Now send some messages ...
