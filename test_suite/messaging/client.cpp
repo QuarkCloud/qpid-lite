@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
         Sender sender = session.createSender("service_queue;{create: always}");
 
         //create temp queue & receiver...
-        Receiver receiver = session.createReceiver("reply_queue;{create: always}");
+        Receiver receiver = session.createReceiver("service_queue;{create: always}");
         Address responseQueue = receiver.getAddress();
 
 	// Now send some messages ...

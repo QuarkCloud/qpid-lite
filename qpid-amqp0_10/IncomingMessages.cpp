@@ -26,8 +26,8 @@
 #include "qpid/amqp/Message.h"
 #include "qpid/amqp/MessageImpl.h"
 
-#include "qpid/client/SessionImpl.h"
-#include "qpid/client/SessionBase0_10Access.h"
+#include "qpid/driver/SessionImpl.h"
+#include "qpid/driver/SessionBase0_10Access.h"
 
 #include "qpid/framing/DeliveryProperties.h"
 #include "qpid/framing/FrameSet.h"
@@ -127,11 +127,11 @@ namespace qpid {
 
 		IncomingMessages::IncomingMessages() : inUse(false) {}
 
-		void IncomingMessages::setSession(qpid::client::AsyncSession s)
+		void IncomingMessages::setSession(qpid::driver::AsyncSession s)
 		{
 			sys::Mutex::ScopedLock l(lock);
 			session = s;
-			incoming = client::SessionBase0_10Access(session).get()->getDemux().getDefault();
+			incoming = driver::SessionBase0_10Access(session).get()->getDemux().getDefault();
 			acceptTracker.reset();
 		}
 

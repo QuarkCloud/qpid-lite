@@ -32,7 +32,7 @@
 #include "qpid/sys/Codec.h"
 #include "qpid/sys/Time.h"
 #include "qpid/sys/AsynchIO.h"
-#include "qpid/sys/Dispatcher.h"
+//#include "qpid/sys/Dispatcher.h"
 #include "qpid/sys/Poller.h"
 #include "qpid/sys/SecurityLayer.h"
 #include "qpid/sys/Msg.h"

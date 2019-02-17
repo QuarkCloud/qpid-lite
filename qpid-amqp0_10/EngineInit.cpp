@@ -1,7 +1,7 @@
 
 #include "qpid/amqp0_10/EngineInit.h"
 #include "qpid/amqp0_10/ConnectionImpl.h"
-#include "qpid/client/ConnectionImpl.h"
+#include "qpid/driver/ConnectionImpl.h"
 #include "qpid/amqp/ProtocolRegistry.h"
 #include "qpid/amqp/DriverImpl.h"
 
@@ -23,7 +23,7 @@ namespace qpid {
 
 			void shutdown()
 			{
-				client::shutdown();
+				driver::shutdown();
 			}
 		}
 

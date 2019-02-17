@@ -20,7 +20,6 @@
  */
 
 #include "qpid/driver/ConnectionImpl.h"
-//#include "qpid/driver/LoadPlugins.h"
 #include "qpid/driver/Connector.h"
 #include "qpid/driver/SessionImpl.h"
 

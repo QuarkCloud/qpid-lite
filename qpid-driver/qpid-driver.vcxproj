@@ -32,16 +32,12 @@
     <ClInclude Include="..\include\qpid\driver\ConnectionImpl.h" />
     <ClInclude Include="..\include\qpid\driver\Connector.h" />
     <ClInclude Include="..\include\qpid\driver\Demux.h" />
-    <ClInclude Include="..\include\qpid\driver\Dispatcher.h" />
     <ClInclude Include="..\include\qpid\driver\Execution.h" />
     <ClInclude Include="..\include\qpid\driver\FlowControl.h" />
     <ClInclude Include="..\include\qpid\driver\Future.h" />
     <ClInclude Include="..\include\qpid\driver\FutureCompletion.h" />
     <ClInclude Include="..\include\qpid\driver\FutureResult.h" />
     <ClInclude Include="..\include\qpid\driver\Handle.h" />
-    <ClInclude Include="..\include\qpid\driver\LoadPlugins.h" />
-    <ClInclude Include="..\include\qpid\driver\LocalQueue.h" />
-    <ClInclude Include="..\include\qpid\driver\LocalQueueImpl.h" />
     <ClInclude Include="..\include\qpid\driver\Message.h" />
     <ClInclude Include="..\include\qpid\driver\MessageImpl.h" />
     <ClInclude Include="..\include\qpid\driver\MessageListener.h" />
@@ -55,11 +51,6 @@
     <ClInclude Include="..\include\qpid\driver\SessionImpl.h" />
     <ClInclude Include="..\include\qpid\driver\SessionState.h" />
     <ClInclude Include="..\include\qpid\driver\StateManager.h" />
-    <ClInclude Include="..\include\qpid\driver\Subscription.h" />
-    <ClInclude Include="..\include\qpid\driver\SubscriptionImpl.h" />
-    <ClInclude Include="..\include\qpid\driver\SubscriptionManager.h" />
-    <ClInclude Include="..\include\qpid\driver\SubscriptionManagerImpl.h" />
-    <ClInclude Include="..\include\qpid\driver\SubscriptionSettings.h" />
     <ClInclude Include="..\include\qpid\driver\TCPConnector.h" />
     <ClInclude Include="..\include\qpid\driver\TypedResult.h" />
   </ItemGroup>
@@ -73,12 +64,10 @@
     <ClCompile Include="ConnectionImpl.cpp" />
     <ClCompile Include="Connector.cpp" />
     <ClCompile Include="Demux.cpp" />
-    <ClCompile Include="Dispatcher.cpp" />
+    <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="Future.cpp" />
     <ClCompile Include="FutureCompletion.cpp" />
     <ClCompile Include="FutureResult.cpp" />
-    <ClCompile Include="LocalQueue.cpp" />
-    <ClCompile Include="LocalQueueImpl.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="MessageImpl.cpp" />
     <ClCompile Include="MessageListener.cpp" />
@@ -89,10 +78,6 @@
     <ClCompile Include="SessionState.cpp" />
     <ClCompile Include="Session_0_10.cpp" />
     <ClCompile Include="StateManager.cpp" />
-    <ClCompile Include="Subscription.cpp" />
-    <ClCompile Include="SubscriptionImpl.cpp" />
-    <ClCompile Include="SubscriptionManager.cpp" />
-    <ClCompile Include="SubscriptionManagerImpl.cpp" />
     <ClCompile Include="TCPConnector.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

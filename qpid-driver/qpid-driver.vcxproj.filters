@@ -42,9 +42,6 @@
     <ClInclude Include="..\include\qpid\driver\SessionImpl.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\SubscriptionImpl.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\qpid\driver\Results.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -106,30 +103,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\qpid\driver\Connector.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\LoadPlugins.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\SubscriptionManager.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\SubscriptionManagerImpl.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\LocalQueue.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\LocalQueueImpl.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\Dispatcher.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\Subscription.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\SubscriptionSettings.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\qpid\driver\FlowControl.h">
@@ -203,27 +176,6 @@
     <ClCompile Include="StateManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Subscription.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SubscriptionImpl.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SubscriptionManager.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SubscriptionManagerImpl.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Dispatcher.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LocalQueue.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LocalQueueImpl.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="AsyncSession_0_10.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -234,6 +186,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="TCPConnector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

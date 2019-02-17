@@ -59,7 +59,7 @@ namespace qpid {
 		using qpid::framing::QueueQueryResult;
 		using qpid::framing::ReplyTo;
 		using qpid::framing::Uuid;
-		using namespace qpid::client;
+		using namespace qpid::driver;
 		using namespace qpid::types;
 		using namespace qpid::framing::message;
 		using namespace boost::assign;
@@ -164,9 +164,9 @@ namespace qpid {
 			void add(const Variant::List& bindings);
 			void setDefaultExchange(const std::string&);
 			void setDefaultQueue(const std::string&);
-			void bind(qpid::client::AsyncSession& session);
-			void unbind(qpid::client::AsyncSession& session);
-			void check(qpid::client::AsyncSession& session);
+			void bind(qpid::driver::AsyncSession& session);
+			void unbind(qpid::driver::AsyncSession& session);
+			void check(qpid::driver::AsyncSession& session);
 		};
 
 		class Node
@@ -196,9 +196,9 @@ namespace qpid {
 		public:
 			Queue(const Address& address);
 		protected:
-			void checkCreate(qpid::client::AsyncSession&, CheckMode);
-			void checkAssert(qpid::client::AsyncSession&, CheckMode);
-			void checkDelete(qpid::client::AsyncSession&, CheckMode);
+			void checkCreate(qpid::driver::AsyncSession&, CheckMode);
+			void checkAssert(qpid::driver::AsyncSession&, CheckMode);
+			void checkDelete(qpid::driver::AsyncSession&, CheckMode);
 		private:
 			const bool durable;
 			bool autoDelete;
@@ -212,9 +212,9 @@ namespace qpid {
 		public:
 			Exchange(const Address& address);
 		protected:
-			void checkCreate(qpid::client::AsyncSession&, CheckMode);
-			void checkAssert(qpid::client::AsyncSession&, CheckMode);
-			void checkDelete(qpid::client::AsyncSession&, CheckMode);
+			void checkCreate(qpid::driver::AsyncSession&, CheckMode);
+			void checkAssert(qpid::driver::AsyncSession&, CheckMode);
+			void checkDelete(qpid::driver::AsyncSession&, CheckMode);
 			bool isReservedName();
 
 		protected:
@@ -230,8 +230,8 @@ namespace qpid {
 		{
 		public:
 			QueueSource(const Address& address);
-			void subscribe(qpid::client::AsyncSession& session, const std::string& destination);
-			void cancel(qpid::client::AsyncSession& session, const std::string& destination);
+			void subscribe(qpid::driver::AsyncSession& session, const std::string& destination);
+			void cancel(qpid::driver::AsyncSession& session, const std::string& destination);
 		private:
 			const AcquireMode acquireMode;
 			const AcceptMode acceptMode;
@@ -243,8 +243,8 @@ namespace qpid {
 		{
 		public:
 			Subscription(const Address&, const std::string& actualType);
-			void subscribe(qpid::client::AsyncSession& session, const std::string& destination);
-			void cancel(qpid::client::AsyncSession& session, const std::string& destination);
+			void subscribe(qpid::driver::AsyncSession& session, const std::string& destination);
+			void cancel(qpid::driver::AsyncSession& session, const std::string& destination);
 		private:
 			const std::string queue;
 			const bool durable;
@@ -268,9 +268,9 @@ namespace qpid {
 		{
 		public:
 			ExchangeSink(const Address& name);
-			void declare(qpid::client::AsyncSession& session, const std::string& name);
-			void send(qpid::client::AsyncSession& session, const std::string& name, OutgoingMessage& message);
-			void cancel(qpid::client::AsyncSession& session, const std::string& name);
+			void declare(qpid::driver::AsyncSession& session, const std::string& name);
+			void send(qpid::driver::AsyncSession& session, const std::string& name, OutgoingMessage& message);
+			void cancel(qpid::driver::AsyncSession& session, const std::string& name);
 		private:
 		};
 
@@ -278,13 +278,13 @@ namespace qpid {
 		{
 		public:
 			QueueSink(const Address& name);
-			void declare(qpid::client::AsyncSession& session, const std::string& name);
-			void send(qpid::client::AsyncSession& session, const std::string& name, OutgoingMessage& message);
-			void cancel(qpid::client::AsyncSession& session, const std::string& name);
+			void declare(qpid::driver::AsyncSession& session, const std::string& name);
+			void send(qpid::driver::AsyncSession& session, const std::string& name, OutgoingMessage& message);
+			void cancel(qpid::driver::AsyncSession& session, const std::string& name);
 		private:
 		};
-		bool isQueue(qpid::client::Session session, const qpid::amqp::Address& address);
-		bool isTopic(qpid::client::Session session, const qpid::amqp::Address& address);
+		bool isQueue(qpid::driver::Session session, const qpid::amqp::Address& address);
+		bool isTopic(qpid::driver::Session session, const qpid::amqp::Address& address);
 
 		bool in(const Variant& value, const std::vector<std::string>& choices)
 		{
@@ -417,7 +417,7 @@ namespace qpid {
 				list_of<std::string>(AT_LEAST_ONCE)(EXACTLY_ONCE));
 		}
 
-		std::string checkAddressType(qpid::client::Session session, const Address& address)
+		std::string checkAddressType(qpid::driver::Session session, const Address& address)
 		{
 			verifier.verify(address);
 			if (address.getName().empty()) {
@@ -446,7 +446,7 @@ namespace qpid {
 			return type;
 		}
 
-		std::auto_ptr<MessageSource> AddressResolution::resolveSource(qpid::client::Session session,
+		std::auto_ptr<MessageSource> AddressResolution::resolveSource(qpid::driver::Session session,
 			const Address& address)
 		{
 			std::string type = checkAddressType(session, address);
@@ -467,7 +467,7 @@ namespace qpid {
 		}
 
 
-		std::auto_ptr<MessageSink> AddressResolution::resolveSink(qpid::client::Session session,
+		std::auto_ptr<MessageSink> AddressResolution::resolveSink(qpid::driver::Session session,
 			const qpid::amqp::Address& address)
 		{
 			std::string type = checkAddressType(session, address);
@@ -500,7 +500,7 @@ namespace qpid {
 		QueueSource::QueueSource(const Address& address) :
 			Queue(address),
 			acquireMode(isBrowse(address) ? ACQUIRE_MODE_NOT_ACQUIRED : ACQUIRE_MODE_PRE_ACQUIRED),
-			//since this client does not provide any means by which an
+			//since this driver does not provide any means by which an
 			//unacquired message can be acquired, there is no value in an
 			//explicit accept
 			acceptMode(acquireMode == ACQUIRE_MODE_NOT_ACQUIRED || AddressResolution::is_unreliable(address) ? ACCEPT_MODE_NONE : ACCEPT_MODE_EXPLICIT),
@@ -512,7 +512,7 @@ namespace qpid {
 			if (!selector.empty()) options.setString(APACHE_SELECTOR, selector);
 		}
 
-		void QueueSource::subscribe(qpid::client::AsyncSession& session, const std::string& destination)
+		void QueueSource::subscribe(qpid::driver::AsyncSession& session, const std::string& destination)
 		{
 			checkCreate(session, FOR_RECEIVER);
 			checkAssert(session, FOR_RECEIVER);
@@ -536,7 +536,7 @@ namespace qpid {
 				false);
 		}
 
-		void QueueSource::cancel(qpid::client::AsyncSession& session, const std::string& destination)
+		void QueueSource::cancel(qpid::driver::AsyncSession& session, const std::string& destination)
 		{
 			linkBindings.unbind(session);
 			session.messageCancel(destination);
@@ -636,7 +636,7 @@ namespace qpid {
 			bindings.push_back(Binding(exchange, queue, key));
 		}
 
-		void Subscription::subscribe(qpid::client::AsyncSession& session, const std::string& destination)
+		void Subscription::subscribe(qpid::driver::AsyncSession& session, const std::string& destination)
 		{
 			//create exchange if required and specified by policy:
 			checkCreate(session, FOR_RECEIVER);
@@ -676,7 +676,7 @@ namespace qpid {
 				false);
 		}
 
-		void Subscription::cancel(qpid::client::AsyncSession& session, const std::string& destination)
+		void Subscription::cancel(qpid::driver::AsyncSession& session, const std::string& destination)
 		{
 			linkBindings.unbind(session);
 			session.messageCancel(destination);
@@ -691,19 +691,19 @@ namespace qpid {
 
 		ExchangeSink::ExchangeSink(const Address& address) : Exchange(address) {}
 
-		void ExchangeSink::declare(qpid::client::AsyncSession& session, const std::string&)
+		void ExchangeSink::declare(qpid::driver::AsyncSession& session, const std::string&)
 		{
 			checkCreate(session, FOR_SENDER);
 			checkAssert(session, FOR_SENDER);
 			linkBindings.bind(session);
 		}
 
-		void ExchangeSink::send(qpid::client::AsyncSession& session, const std::string&, OutgoingMessage& m)
+		void ExchangeSink::send(qpid::driver::AsyncSession& session, const std::string&, OutgoingMessage& m)
 		{
 			m.send(session, name, m.getSubject());
 		}
 
-		void ExchangeSink::cancel(qpid::client::AsyncSession& session, const std::string&)
+		void ExchangeSink::cancel(qpid::driver::AsyncSession& session, const std::string&)
 		{
 			linkBindings.unbind(session);
 			checkDelete(session, FOR_SENDER);
@@ -711,18 +711,18 @@ namespace qpid {
 
 		QueueSink::QueueSink(const Address& address) : Queue(address) {}
 
-		void QueueSink::declare(qpid::client::AsyncSession& session, const std::string&)
+		void QueueSink::declare(qpid::driver::AsyncSession& session, const std::string&)
 		{
 			checkCreate(session, FOR_SENDER);
 			checkAssert(session, FOR_SENDER);
 			linkBindings.bind(session);
 		}
-		void QueueSink::send(qpid::client::AsyncSession& session, const std::string&, OutgoingMessage& m)
+		void QueueSink::send(qpid::driver::AsyncSession& session, const std::string&, OutgoingMessage& m)
 		{
 			m.send(session, name);
 		}
 
-		void QueueSink::cancel(qpid::client::AsyncSession& session, const std::string&)
+		void QueueSink::cancel(qpid::driver::AsyncSession& session, const std::string&)
 		{
 			linkBindings.unbind(session);
 			checkDelete(session, FOR_SENDER);
@@ -759,13 +759,13 @@ namespace qpid {
 			}
 		}
 
-		bool isQueue(qpid::client::Session session, const qpid::amqp::Address& address)
+		bool isQueue(qpid::driver::Session session, const qpid::amqp::Address& address)
 		{
 			return address.getType() == QUEUE_ADDRESS ||
 				(address.getType().empty() && session.queueQuery(address.getName()).getQueue() == address.getName());
 		}
 
-		bool isTopic(qpid::client::Session session, const qpid::amqp::Address& address)
+		bool isTopic(qpid::driver::Session session, const qpid::amqp::Address& address)
 		{
 			if (address.getType().empty()) {
 				return !session.exchangeQuery(address.getName()).getNotFound();
@@ -804,7 +804,7 @@ namespace qpid {
 			}
 		}
 
-		void Queue::checkCreate(qpid::client::AsyncSession& session, CheckMode mode)
+		void Queue::checkCreate(qpid::driver::AsyncSession& session, CheckMode mode)
 		{
 			if (enabled(createPolicy, mode)) {
 				QPID_LOG(debug, "Auto-creating queue '" << name << "'");
@@ -849,7 +849,7 @@ namespace qpid {
 			}
 		}
 
-		void Queue::checkDelete(qpid::client::AsyncSession& session, CheckMode mode)
+		void Queue::checkDelete(qpid::driver::AsyncSession& session, CheckMode mode)
 		{
 			//Note: queue-delete will cause a session exception if the queue
 			//does not exist, the query here prevents obvious cases of this
@@ -864,7 +864,7 @@ namespace qpid {
 			}
 		}
 
-		void Queue::checkAssert(qpid::client::AsyncSession& session, CheckMode mode)
+		void Queue::checkAssert(qpid::driver::AsyncSession& session, CheckMode mode)
 		{
 			if (enabled(assertPolicy, mode)) {
 				QueueQueryResult result = sync(session).queueQuery(name);
@@ -920,7 +920,7 @@ namespace qpid {
 			return name.find(PREFIX_AMQ) != std::string::npos || name.find(PREFIX_QPID) != std::string::npos;
 		}
 
-		void Exchange::checkCreate(qpid::client::AsyncSession& session, CheckMode mode)
+		void Exchange::checkCreate(qpid::driver::AsyncSession& session, CheckMode mode)
 		{
 			if (enabled(createPolicy, mode)) {
 				try {
@@ -988,7 +988,7 @@ namespace qpid {
 			}
 		}
 
-		void Exchange::checkDelete(qpid::client::AsyncSession& session, CheckMode mode)
+		void Exchange::checkDelete(qpid::driver::AsyncSession& session, CheckMode mode)
 		{
 			//Note: exchange-delete will cause a session exception if the
 			//exchange does not exist, the query here prevents obvious cases
@@ -1003,7 +1003,7 @@ namespace qpid {
 			}
 		}
 
-		void Exchange::checkAssert(qpid::client::AsyncSession& session, CheckMode mode)
+		void Exchange::checkAssert(qpid::driver::AsyncSession& session, CheckMode mode)
 		{
 			if (enabled(assertPolicy, mode)) {
 				ExchangeQueryResult result = sync(session).exchangeQuery(name);
@@ -1068,7 +1068,7 @@ namespace qpid {
 			}
 		}
 
-		void Bindings::bind(qpid::client::AsyncSession& session)
+		void Bindings::bind(qpid::driver::AsyncSession& session)
 		{
 			for (Bindings::const_iterator i = begin(); i != end(); ++i) {
 				session.exchangeBind(
@@ -1080,7 +1080,7 @@ namespace qpid {
 			}
 		}
 
-		void Bindings::unbind(qpid::client::AsyncSession& session)
+		void Bindings::unbind(qpid::driver::AsyncSession& session)
 		{
 			for (Bindings::const_iterator i = begin(); i != end(); ++i) {
 				session.exchangeUnbind(
@@ -1091,7 +1091,7 @@ namespace qpid {
 			}
 		}
 
-		void Bindings::check(qpid::client::AsyncSession& session)
+		void Bindings::check(qpid::driver::AsyncSession& session)
 		{
 			for (Bindings::const_iterator i = begin(); i != end(); ++i) {
 				ExchangeBoundResult result = sync(session).exchangeBound(
