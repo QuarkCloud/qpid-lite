@@ -29,7 +29,6 @@
 #include "qpid/amqp/exceptions.h"
 
 #include "qpid/driver/Session.h"
-#include "qpid/driver/SubscriptionManager.h"
 #include "qpid/framing/reply_exceptions.h"
 #include "qpid/sys/ExceptionHolder.h"
 #include "qpid/sys/Time.h"

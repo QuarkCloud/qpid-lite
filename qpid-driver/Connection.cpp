@@ -23,7 +23,7 @@
 
 #include "qpid/driver/Message.h"
 #include "qpid/driver/SessionImpl.h"
-#include "qpid/driver/SessionBase0_10Access.h"
+#include "qpid/driver/SessionBaseAccess.h"
 
 #include "qpid/amqp/ConnectionOptions.h"
 
@@ -139,7 +139,7 @@ Session Connection::newSession(const std::string& name, uint32_t timeout) {
     if (!isOpen())
         throw TransportFailure("Can't create session, connection is not open");
     Session s;
-    SessionBase0_10Access(s).set(impl->newSession(name, timeout));
+    SessionBaseAccess(s).set(impl->newSession(name, timeout));
     return s;
 }
 

@@ -155,9 +155,6 @@
     <ClInclude Include="..\include\qpid\amqp\typecodes.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\qpid\amqp\Transaction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\qpid\amqp\DriverImpl.h">
       <Filter>头文件</Filter>
     </ClInclude>

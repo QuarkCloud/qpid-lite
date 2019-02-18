@@ -84,7 +84,6 @@
     <ClInclude Include="..\include\qpid\amqp\Receiver.h" />
     <ClInclude Include="..\include\qpid\amqp\Sender.h" />
     <ClInclude Include="..\include\qpid\amqp\Session.h" />
-    <ClInclude Include="..\include\qpid\amqp\Transaction.h" />
     <ClInclude Include="..\include\qpid\amqp\typecodes.h" />
     <ClInclude Include="AddressImpl.h" />
   </ItemGroup>

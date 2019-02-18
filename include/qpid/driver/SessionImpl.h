@@ -28,12 +28,18 @@
 #include "qpid/driver/Compile.h"
 #include "qpid/driver/SessionId.h"
 #include "qpid/driver/SessionState.h"
+#include "qpid/driver/Future.h"
+#include "qpid/driver/ConnectionImpl.h"
 
 #include "qpid/framing/FrameHandler.h"
 #include "qpid/framing/ChannelHandler.h"
 #include "qpid/framing/SequenceNumber.h"
 #include "qpid/framing/AMQP_ClientOperations.h"
 #include "qpid/framing/AMQP_ServerProxy.h"
+
+#include "qpid/framing/FrameSet.h"
+#include "qpid/framing/MethodContent.h"
+#include "qpid/framing/SequenceSet.h"
 
 #include "qpid/sys/Semaphore.h"
 #include "qpid/sys/StateMonitor.h"
@@ -44,20 +50,8 @@
 #include <boost/optional.hpp>
 
 namespace qpid {
-
-namespace framing {
-
-class FrameSet;
-class MethodContent;
-class SequenceSet;
-
-}
-
 namespace driver {
 
-class Future;
-class ConnectionImpl;
-class SessionHandler;
 
 ///@internal
 class SessionImpl : public framing::FrameHandler::InOutHandler,
@@ -212,8 +206,6 @@ private:
     framing::SequenceNumber nextOut;
 
     SessionState sessionState;
-
-  friend class driver::SessionHandler;
 };
 
 }} // namespace qpid::driver

@@ -22,20 +22,20 @@
  *
  */
 
-#include "qpid/driver/SessionBase0_10.h"
+#include "qpid/driver/SessionBase.h"
 
 /**@file @internal  Internal use only */
 
 namespace qpid {
 namespace driver {
 
-class SessionBase0_10Access {
+class SessionBaseAccess {
   public:
-    SessionBase0_10Access(SessionBase0_10& sb_) : sb(sb_) {}
+	  SessionBaseAccess(SessionBase& sb_) : sb(sb_) {}
     void set(const boost::shared_ptr<SessionImpl>& si) { sb.impl = si; }
     boost::shared_ptr<SessionImpl> get() const { return sb.impl; }
   private:
-    SessionBase0_10& sb;
+	  SessionBase& sb;
 };
 }} // namespace qpid::driver
 

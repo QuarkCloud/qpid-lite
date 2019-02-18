@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\qpid\driver\AsyncSession.h" />
-    <ClInclude Include="..\include\qpid\driver\AsyncSession0_10.h" />
     <ClInclude Include="..\include\qpid\driver\Bounds.h" />
     <ClInclude Include="..\include\qpid\driver\ChainableFrameHandler.h" />
     <ClInclude Include="..\include\qpid\driver\Compile.h" />
@@ -33,7 +32,6 @@
     <ClInclude Include="..\include\qpid\driver\Connector.h" />
     <ClInclude Include="..\include\qpid\driver\Demux.h" />
     <ClInclude Include="..\include\qpid\driver\Execution.h" />
-    <ClInclude Include="..\include\qpid\driver\FlowControl.h" />
     <ClInclude Include="..\include\qpid\driver\Future.h" />
     <ClInclude Include="..\include\qpid\driver\FutureCompletion.h" />
     <ClInclude Include="..\include\qpid\driver\FutureResult.h" />
@@ -44,9 +42,8 @@
     <ClInclude Include="..\include\qpid\driver\PrivateImplRef.h" />
     <ClInclude Include="..\include\qpid\driver\Results.h" />
     <ClInclude Include="..\include\qpid\driver\Session.h" />
-    <ClInclude Include="..\include\qpid\driver\Session0_10.h" />
-    <ClInclude Include="..\include\qpid\driver\SessionBase0_10.h" />
-    <ClInclude Include="..\include\qpid\driver\SessionBase0_10Access.h" />
+    <ClInclude Include="..\include\qpid\driver\SessionBase.h" />
+    <ClInclude Include="..\include\qpid\driver\SessionBaseAccess.h" />
     <ClInclude Include="..\include\qpid\driver\SessionId.h" />
     <ClInclude Include="..\include\qpid\driver\SessionImpl.h" />
     <ClInclude Include="..\include\qpid\driver\SessionState.h" />
@@ -55,7 +52,7 @@
     <ClInclude Include="..\include\qpid\driver\TypedResult.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AsyncSession_0_10.cpp" />
+    <ClCompile Include="AsyncSession.cpp" />
     <ClCompile Include="Bounds.cpp" />
     <ClCompile Include="Completion.cpp" />
     <ClCompile Include="CompletionImpl.cpp" />
@@ -72,11 +69,11 @@
     <ClCompile Include="MessageImpl.cpp" />
     <ClCompile Include="MessageListener.cpp" />
     <ClCompile Include="Results.cpp" />
-    <ClCompile Include="SessionBase0_10.cpp" />
+    <ClCompile Include="SessionBase.cpp" />
     <ClCompile Include="SessionId.cpp" />
     <ClCompile Include="SessionImpl.cpp" />
     <ClCompile Include="SessionState.cpp" />
-    <ClCompile Include="Session_0_10.cpp" />
+    <ClCompile Include="Session.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="TCPConnector.cpp" />
   </ItemGroup>

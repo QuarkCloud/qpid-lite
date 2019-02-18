@@ -34,7 +34,7 @@
 #include "qpid/amqp/Receiver.h"
 #include "qpid/amqp/Session.h"
 
-#include "qpid/driver/SessionBase0_10Access.h"
+#include "qpid/driver/SessionBaseAccess.h"
 #include "qpid/driver/SessionImpl.h"
 
 #include "qpid/framing/enum.h"
@@ -76,7 +76,7 @@ namespace qpid {
 		{
 			ScopedLock l(lock);
 			txError.raise();
-			qpid::driver::SessionBase0_10Access s(session);
+			qpid::driver::SessionBaseAccess s(session);
 			try {
 				s.get()->assertOpen();
 			}
@@ -109,7 +109,7 @@ namespace qpid {
 		bool SessionImpl::hasError()
 		{
 			ScopedLock l(lock);
-			qpid::driver::SessionBase0_10Access s(session);
+			qpid::driver::SessionBaseAccess s(session);
 			return s.get()->hasError();
 		}
 

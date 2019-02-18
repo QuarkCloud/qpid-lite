@@ -55,12 +55,12 @@ enum CreditUnit { MESSAGE_CREDIT=0, BYTE_CREDIT=1, UNLIMITED_CREDIT=0xFFFFFFFF }
  * Subclasses provide the AMQP commands for a given
  * version of the protocol.
  */
-class QPID_DRIVER_CLASS_EXTERN SessionBase0_10 {
+class QPID_DRIVER_CLASS_EXTERN SessionBase {
   public:
 
     ///@internal
-    QPID_DRIVER_EXTERN SessionBase0_10();
-    QPID_DRIVER_EXTERN ~SessionBase0_10();
+    QPID_DRIVER_EXTERN SessionBase();
+    QPID_DRIVER_EXTERN ~SessionBase();
 
     /** Get the session ID */
     QPID_DRIVER_EXTERN SessionId getId() const;
@@ -103,7 +103,7 @@ class QPID_DRIVER_CLASS_EXTERN SessionBase0_10 {
     QPID_DRIVER_EXTERN Connection getConnection();
   protected:
     boost::shared_ptr<SessionImpl> impl;
-  friend class SessionBase0_10Access;
+  friend class SessionBaseAccess;
 };
 
 }} // namespace qpid::driver

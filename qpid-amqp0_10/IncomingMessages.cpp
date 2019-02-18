@@ -27,7 +27,7 @@
 #include "qpid/amqp/MessageImpl.h"
 
 #include "qpid/driver/SessionImpl.h"
-#include "qpid/driver/SessionBase0_10Access.h"
+#include "qpid/driver/SessionBaseAccess.h"
 
 #include "qpid/framing/DeliveryProperties.h"
 #include "qpid/framing/FrameSet.h"
@@ -131,7 +131,7 @@ namespace qpid {
 		{
 			sys::Mutex::ScopedLock l(lock);
 			session = s;
-			incoming = driver::SessionBase0_10Access(session).get()->getDemux().getDefault();
+			incoming = driver::SessionBaseAccess(session).get()->getDemux().getDefault();
 			acceptTracker.reset();
 		}
 

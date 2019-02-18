@@ -24,9 +24,6 @@
     <ClInclude Include="..\include\qpid\driver\Connection.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\Session.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\qpid\driver\CompletionImpl.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -51,19 +48,7 @@
     <ClInclude Include="..\include\qpid\driver\SessionState.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\Demux.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\qpid\driver\Execution.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\SessionBase0_10Access.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\Session0_10.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\SessionBase0_10.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\qpid\driver\TypedResult.h">
@@ -105,16 +90,22 @@
     <ClInclude Include="..\include\qpid\driver\Connector.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\FlowControl.h">
+    <ClInclude Include="..\include\qpid\driver\TCPConnector.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\AsyncSession0_10.h">
+    <ClInclude Include="..\include\qpid\driver\SessionBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\driver\SessionBaseAccess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qpid\driver\Session.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\qpid\driver\AsyncSession.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\qpid\driver\TCPConnector.h">
+    <ClInclude Include="..\include\qpid\driver\Demux.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -158,9 +149,6 @@
     <ClCompile Include="Connection.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Demux.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Results.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -176,19 +164,22 @@
     <ClCompile Include="StateManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AsyncSession_0_10.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Session_0_10.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SessionBase0_10.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="TCPConnector.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DllMain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demux.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

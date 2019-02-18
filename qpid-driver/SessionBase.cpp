@@ -18,7 +18,7 @@
  * under the License.
  *
  */
-#include "qpid/driver/SessionBase0_10.h"
+#include "qpid/driver/SessionBase.h"
 #include "qpid/driver/Connection.h"
 #include "qpid/driver/ConnectionAccess.h"
 #include "qpid/driver/SessionImpl.h"
@@ -30,52 +30,52 @@ namespace driver {
 
 using namespace framing;
 
-SessionBase0_10::SessionBase0_10() {}
-SessionBase0_10::~SessionBase0_10() {}
+SessionBase::SessionBase() {}
+SessionBase::~SessionBase() {}
 
-void SessionBase0_10::close() 
+void SessionBase::close()
 { 
     if (impl) impl->close(); 
 }
 
-void SessionBase0_10::flush()
+void SessionBase::flush()
 {
     impl->sendFlush();
 }
 
-void SessionBase0_10::sync()
+void SessionBase::sync()
 {
     ExecutionSyncBody b;
     b.setSync(true);
     impl->send(b).wait(*impl);
 }
 
-void SessionBase0_10::markCompleted(const framing::SequenceSet& ids, bool notifyPeer)
+void SessionBase::markCompleted(const framing::SequenceSet& ids, bool notifyPeer)
 {
     impl->markCompleted(ids, notifyPeer);
 }
 
-void SessionBase0_10::markCompleted(const framing::SequenceNumber& id, bool cumulative, bool notifyPeer)
+void SessionBase::markCompleted(const framing::SequenceNumber& id, bool cumulative, bool notifyPeer)
 {
     impl->markCompleted(id, cumulative, notifyPeer);
 }
 
-void SessionBase0_10::sendCompletion()
+void SessionBase::sendCompletion()
 {
     impl->sendCompletion();
 }
 
-uint16_t SessionBase0_10::getChannel() const { return impl->getChannel(); }
+uint16_t SessionBase::getChannel() const { return impl->getChannel(); }
 
-void SessionBase0_10::suspend() { impl->suspend(); }
-void SessionBase0_10::resume(Connection c) { impl->resume(c.impl); }
-uint32_t SessionBase0_10::timeout(uint32_t seconds) { return impl->setTimeout(seconds); }
+void SessionBase::suspend() { impl->suspend(); }
+void SessionBase::resume(Connection c) { impl->resume(c.impl); }
+uint32_t SessionBase::timeout(uint32_t seconds) { return impl->setTimeout(seconds); }
 
-SessionId SessionBase0_10::getId() const { return impl->getId(); }
+SessionId SessionBase::getId() const { return impl->getId(); }
 
-bool SessionBase0_10::isValid() const { return !!impl; }
+bool SessionBase::isValid() const { return !!impl; }
 
-Connection SessionBase0_10::getConnection()
+Connection SessionBase::getConnection()
 {
     Connection c;
     ConnectionAccess::setImpl(c, impl->getConnection());

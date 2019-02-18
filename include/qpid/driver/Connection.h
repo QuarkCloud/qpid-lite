@@ -216,7 +216,7 @@ class QPID_DRIVER_CLASS_EXTERN Connection
     QPID_DRIVER_EXTERN const amqp::ConnectionOptions& getNegotiatedSettings() const;
 
   friend struct ConnectionAccess; ///<@internal
-  friend class SessionBase0_10; ///<@internal
+  friend class SessionBase; ///<@internal
 };
 
 }} // namespace qpid::driver
